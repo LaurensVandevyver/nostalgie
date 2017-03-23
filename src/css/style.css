@@ -8,7 +8,8 @@
 
 body {
   font-family: helvetica;
-  font-size: 1.6rem;
+  font-size: 2.5rem;
+  line-height: 130%;
 }
 
 header {
@@ -32,7 +33,6 @@ header {
 .header-wrapper {
   width: 100vw;
   height: 100vh;
-  border: 1px solid green;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -59,10 +59,11 @@ main {
   width: 96rem;
 }
 
-.articlestyle {
-  font-size: 2.5rem;
-  line-height: 130%;
+.margin {
   margin: 10rem;
+}
+
+.articlestyle {
 
   /*& ::first-letter {
     color: var(--blue);
@@ -97,6 +98,14 @@ main {
   margin-top: 20rem;
 }
 
+.model2 {
+  width: 60rem;
+}
+
+.left {
+  margin-left: 20rem;
+}
+
 .modelcite {
   font-size: 3.5rem;
   line-height: 140%;
@@ -106,4 +115,46 @@ main {
   padding-left: 1rem;
   border-left: 1rem solid var(--pink);
   margin-top: 20rem;
+}
+
+.gallery {
+  width: 100vw;
+  height: 80vh;
+  background-color: var(--pink);
+}
+
+.black-velvet-header {
+  margin-left: 0;
+  background-image: url(../assets/img/velvetbanner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 68.4rem;
+
+  &::after {
+    content: '';
+    background: linear-gradient(rgba(white, 0), rgba(white, 1));
+    width: 100vw;
+    height: 68.4rem;
+    position: absolute;
+    margin-top: 0;
+    margin-left: 0;
+    z-index: 9999;
+  }
+}
+
+.underground {
+  width: 75rem;
+  border: 1px solid blue;
+  margin-top: -20rem;
+  z-index: 999;
+}
+
+h2 {
+  color: var(--pink);
+  font-family: times;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0 0 3rem -3rem;
 }
