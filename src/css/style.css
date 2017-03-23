@@ -1,15 +1,97 @@
 @import 'reset';
 
+:root {
+  --blue: #292eba;
+  --pink: #e64f60;
+  --yellow: #f4ac48;
+}
+
 body {
-  font-family: Roboto;
+  font-family: helvetica;
   font-size: 1.6rem;
-  margin: 2rem;
 }
 
 header {
-  margin: 2rem 0;
+  width: 100vw;
+  height: 100vw;
+  background: repeating-radial-gradient(var(--blue), var(--blue) 5%, var(--pink) 5%, var(--pink) 10%);
+  display: flex;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 3rem;
+cite {
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 110%;
+  width: 96rem;
+  transform: rotate(-7deg);
+}
+
+.header-wrapper {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid green;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nico-headerimage {
+  background-image: url(../assets/img/header-image.png);
+  width: 71.3rem;
+  height: 65.3rem;
+}
+
+main {
+  top: 100vh;
+  position: absolute;
+  background-color: white;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 96rem;
+}
+
+.articlestyle {
+  font-size: 2.5rem;
+  line-height: 130%;
+  margin: 10rem;
+
+  /*& ::first-letter {
+    color: var(--blue);
+    float: left;
+    font-weight: bold;
+    font-size: 7.5rem;
+    line-height: 6rem;
+    padding-top: .4rem;
+    padding-right: .8rem;
+    padding-left: .3rem;
+  }*/
+}
+
+.articlestyle::first-letter {
+  color: var(--blue);
+  float: left;
+  font-family: times;
+  font-weight: bold;
+  font-size: 7.5rem;
+  line-height: 6rem;
+  padding-top: .4rem;
+  padding-right: .8rem;
+  padding-left: .3rem;
+}
+
+.intro {
+  width: 75rem;
+}
+
+.model {
+  width: 34rem;
+  margin-top: 20rem;
 }
