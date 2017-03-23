@@ -19,10 +19,11 @@ header {
   justify-content: center;
 }
 
-cite {
+.introcite {
   color: white;
   font-size: 5rem;
   font-weight: bold;
+  font-style: italic;
   line-height: 110%;
   width: 96rem;
   transform: rotate(-7deg);
@@ -93,5 +94,16 @@ main {
 
 .model {
   width: 34rem;
+  margin-top: 20rem;
+}
+
+.modelcite {
+  font-size: 3.5rem;
+  line-height: 140%;
+  font-family: times;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 1rem;
+  border-left: 1rem solid var(--pink);
   margin-top: 20rem;
 }
