@@ -10,29 +10,31 @@ body {
   font-family: helvetica;
   font-size: 2.5rem;
   line-height: 130%;
+  color: #333;
 }
 
 header {
   width: 100vw;
-  height: 100vw;
-  background: repeating-radial-gradient(var(--blue), var(--blue) 5%, var(--pink) 5%, var(--pink) 10%);
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
 
 .introcite {
-  color: white;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
   font-style: italic;
+  font-family: times;
   line-height: 110%;
-  width: 96rem;
-  transform: rotate(-7deg);
+  background-color: white;
+  position: absolute;
+  bottom: 14rem;
+  margin-left: -10rem;
 }
 
 .header-wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -43,12 +45,21 @@ header {
   background-image: url(../assets/img/header-image.png);
   width: 71.3rem;
   height: 65.3rem;
+
+  &::before {
+    content: '';
+    width: 50rem;
+    height: 7.5rem;
+    background-color: var(--blue);
+    margin-left: -1rem;
+    margin-top: 62rem;
+    position: absolute;
+    transform: rotate(3deg);
+    mix-blend-mode: darken;
+  }
 }
 
 main {
-  top: 100vh;
-  position: absolute;
-  background-color: white;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -57,6 +68,7 @@ main {
 
 .content {
   width: 96rem;
+  z-index: 3;
 }
 
 .margin {
@@ -64,29 +76,19 @@ main {
 }
 
 .articlestyle {
+  z-index: 9;
 
-  /*& ::first-letter {
+  &::first-letter {
     color: var(--blue);
     float: left;
+    font-family: times;
     font-weight: bold;
     font-size: 7.5rem;
     line-height: 6rem;
     padding-top: .4rem;
     padding-right: .8rem;
     padding-left: .3rem;
-  }*/
-}
-
-.articlestyle::first-letter {
-  color: var(--blue);
-  float: left;
-  font-family: times;
-  font-weight: bold;
-  font-size: 7.5rem;
-  line-height: 6rem;
-  padding-top: .4rem;
-  padding-right: .8rem;
-  padding-left: .3rem;
+  }
 }
 
 .intro {
@@ -134,21 +136,19 @@ main {
 
   &::after {
     content: '';
-    background: linear-gradient(rgba(white, 0), rgba(white, 1));
+    background: linear-gradient(rgba(255, 255, 255, 0), white);
     width: 100vw;
     height: 68.4rem;
     position: absolute;
     margin-top: 0;
     margin-left: 0;
-    z-index: 9999;
+    z-index: 2;
   }
 }
 
 .underground {
   width: 75rem;
-  border: 1px solid blue;
   margin-top: -20rem;
-  z-index: 999;
 }
 
 h2 {
@@ -157,4 +157,56 @@ h2 {
   font-size: 3.5rem;
   font-weight: bold;
   margin: 0 0 3rem -3rem;
+}
+
+.nico-image-1 {
+  background-image: url(../assets/img/nico1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 67.2rem;
+  width: 100vw;
+  margin-top: 5rem;
+}
+
+.nico-image-2 {
+  background-image: url(../assets/img/nico2.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 108rem;
+  width: 100vw;
+  margin-top: 5rem;
+  left: 0;
+}
+
+.undergroundcite {
+  width: 50rem;
+  font-size: 3.5rem;
+  line-height: 140%;
+  font-family: times;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 1rem;
+  border-left: 1rem solid var(--pink);
+}
+
+.undergroundsection {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.undergroundstyle {
+  width: 50rem;
+}
+
+.react-mount2 {
+  width: 25rem;
+  height: 25rem;
+  background-color: var(--yellow);
 }
