@@ -3,7 +3,9 @@
 :root {
   --blue: #292eba;
   --pink: #e64f60;
-  --yellow: #f4ac48;
+  --yellow: #ffa624;
+  --grey: #323232;
+  --light_grey: #cbcbcb;
 }
 
 body {
@@ -28,8 +30,9 @@ header {
   line-height: 110%;
   background-color: white;
   position: absolute;
-  bottom: 14rem;
-  margin-left: -8rem;
+  bottom: 10rem;
+  margin-left: -17.4rem;
+  padding: 1.2rem;
 }
 
 .header-wrapper {
@@ -77,6 +80,15 @@ header {
   z-index: -1;
 }
 
+.druip3 {
+  background-image: url(../assets/img/druip3.png);
+  width: 110.4rem;
+  height: 63rem;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
 main {
   width: 100vw;
   display: flex;
@@ -95,6 +107,14 @@ main {
 
 .articlestyle {
   z-index: 9;
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+  color: var(--grey);
+
+  strong {
+    font-weight: bold;
+    color: black;
+  }
 
   &::first-letter {
     color: var(--blue);
@@ -126,14 +146,15 @@ main {
 }
 
 .modelcite {
-  font-size: 3.5rem;
+  width: 65rem;
+  font-size: 3rem;
   line-height: 140%;
   font-family: times;
   font-weight: bold;
   font-style: italic;
   padding-left: 1rem;
-  border-left: 1rem solid var(--pink);
-  margin-top: 20rem;
+  border-left: .5rem solid var(--pink);
+  margin-top: -5rem;
   display: flex;
 }
 
@@ -206,13 +227,13 @@ h2 {
 
 .undergroundcite {
   width: 70rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 140%;
   font-family: times;
   font-weight: bold;
   font-style: italic;
   padding-left: 1rem;
-  border-left: 1rem solid var(--pink);
+  border-left: .5rem solid var(--pink);
   display: flex;
   margin-top: 10rem;
 }
@@ -255,7 +276,7 @@ h2 {
 }
 
 .black {
-  background-color: black;
+  background-color: #0d0d0d;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -264,8 +285,15 @@ h2 {
 }
 
 .articlestyle2 {
+  font-size: 1.7rem;
+  line-height: 2.8rem;
   z-index: 9;
-  color: white;
+  color: var(--light_grey);
+
+  strong {
+    color: white;
+    font-weight: bold;
+  }
 
   &::first-letter {
     color: var(--pink);
@@ -303,17 +331,17 @@ h2 {
 .solocite {
   width: 60rem;
   color: white;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 140%;
   font-family: times;
   font-weight: bold;
   font-style: italic;
   padding-left: 1rem;
-  border-left: 1rem solid var(--pink);
+  border-left: .5rem solid var(--pink);
 }
 
 .endcite {
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 140%;
   font-family: times;
   font-weight: bold;
@@ -336,10 +364,6 @@ h2 {
 
 .quote {
   color: var(--yellow);
-}
-
-strong {
-  font-weight: bold;
 }
 
 .pink {
