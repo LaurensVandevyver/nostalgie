@@ -21,7 +21,7 @@ header {
 }
 
 .introcite {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: bold;
   font-style: italic;
   font-family: times;
@@ -29,7 +29,7 @@ header {
   background-color: white;
   position: absolute;
   bottom: 14rem;
-  margin-left: -10rem;
+  margin-left: -8rem;
 }
 
 .header-wrapper {
@@ -43,8 +43,8 @@ header {
 
 .nico-headerimage {
   background-image: url(../assets/img/header-image.png);
-  width: 71.3rem;
-  height: 65.3rem;
+  width: 77.6rem;
+  height: 69.6rem;
 
   &::before {
     content: '';
@@ -52,11 +52,29 @@ header {
     height: 7.5rem;
     background-color: var(--blue);
     margin-left: -1rem;
-    margin-top: 62rem;
+    margin-top: 65rem;
     position: absolute;
     transform: rotate(3deg);
     mix-blend-mode: darken;
   }
+}
+
+.druip1 {
+  background-image: url(../assets/img/druip1.png);
+  width: 89.5rem;
+  height: 67.7rem;
+  position: absolute;
+  left: 0;
+  z-index: -2;
+}
+
+.druip2 {
+  background-image: url(../assets/img/druip2.png);
+  width: 110.4rem;
+  height: 63rem;
+  position: absolute;
+  left: 0;
+  z-index: -1;
 }
 
 main {
@@ -116,6 +134,7 @@ main {
   padding-left: 1rem;
   border-left: 1rem solid var(--pink);
   margin-top: 20rem;
+  display: flex;
 }
 
 .gallery {
@@ -329,4 +348,99 @@ strong {
 
 .tekstblok {
   width: 65rem;
+}
+
+.content-img {
+  opacity: 0;
+  visibility: hidden;
+  right: 10%;
+  top: 10%;
+}
+
+.img-container {
+  height: 50%;
+  top: 5%;
+  width: 50%;
+}
+
+@media (width <= 960px) {
+
+  .content {
+    width: 90vw;
+    border: 1px solid red;
+  }
+
+  .intro {
+    width: 100%;
+  }
+
+  .margin {
+    margin: 10rem 0;
+  }
+
+  .model {
+    width: 90vw;
+  }
+
+  .model2 {
+    width: 90vw;
+  }
+
+  .underground {
+    width: 75vw;
+  }
+
+  .undergroundcite {
+    width: 90vw;
+  }
+
+  .tekstblok {
+    width: 90vw;
+  }
+
+  .undergroundstyle {
+    width: 90vw;
+  }
+
+  .articlestyle2 {
+    width: 90vw;
+  }
+
+  .solocontainer {
+    width: 90vw;
+  }
+}
+
+@media (width <= 840px) {
+
+  .undergroundsection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .solocite {
+    width: 90vw;
+  }
+
+  .solocontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .react-mount2 {
+    margin: 2rem;
+  }
+}
+
+@media (width <= 600px) {
+
+  .underground {
+    width: 90vw;
+    margin-left: 0;
+  }
+
+  h2 {
+    margin-left: 0;
+    line-height: 120%;
+  }
 }
