@@ -111,11 +111,6 @@ main {
   line-height: 2.8rem;
   color: var(--grey);
 
-  strong {
-    font-weight: bold;
-    color: black;
-  }
-
   &::first-letter {
     color: var(--blue);
     float: left;
@@ -126,6 +121,11 @@ main {
     padding-top: 2rem;
     padding-right: .7rem;
   }
+}
+
+strong {
+  font-weight: bold;
+  color: black;
 }
 
 .intro {
@@ -403,11 +403,11 @@ h2 {
   }
 
   .model {
-    width: 90vw;
+    width: 40vw;
   }
 
   .model2 {
-    width: 90vw;
+    width: 70vw;
   }
 
   .underground {
@@ -419,11 +419,11 @@ h2 {
   }
 
   .tekstblok {
-    width: 90vw;
+    width: 50vw;
   }
 
   .undergroundstyle {
-    width: 90vw;
+    width: 50vw;
   }
 
   .articlestyle2 {
@@ -433,17 +433,60 @@ h2 {
   .solocontainer {
     width: 90vw;
   }
+
+  .solocite {
+    width: 45vw;
+  }
+
+  .left {
+    margin-left: 10rem;
+  }
 }
 
-@media (width <= 840px) {
+@media (width <= 720px) {
 
   .undergroundsection {
     flex-direction: column;
     align-items: center;
   }
 
-  .solocite {
+  .tekstblok {
     width: 90vw;
+  }
+
+  .undergroundstyle {
+    width: 90vw;
+  }
+}
+
+@media (width <= 630px) {
+
+  .model {
+    width: 90vw;
+  }
+
+  .modelcite {
+    width: 80vw;
+  }
+}
+
+@media (width <= 600px) {
+
+  .underground {
+    width: 90vw;
+    margin-left: 0;
+  }
+
+  .left {
+    margin-left: 0;
+  }
+
+  .model2 {
+    width: 90vw;
+  }
+
+  .solocite {
+    width: 80vw;
   }
 
   .solocontainer {
@@ -453,14 +496,6 @@ h2 {
 
   .react-mount2 {
     margin: 2rem;
-  }
-}
-
-@media (width <= 600px) {
-
-  .underground {
-    width: 90vw;
-    margin-left: 0;
   }
 
   h2 {
