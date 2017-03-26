@@ -276,12 +276,22 @@ h2 {
 }
 
 .black {
+  position: relative;
   background-color: #0d0d0d;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #cdcdcd;
+}
+
+.spuit {
+  background-image: url(../assets/img/spuit.png);
+  width: 20rem;
+  height: 64.8rem;
+  position: absolute;
+  right: 3rem;
+  bottom: -3rem;
 }
 
 .articlestyle2 {
@@ -296,7 +306,7 @@ h2 {
   }
 
   &::first-letter {
-    color: var(--pink);
+    color: white;
     float: left;
     font-family: times;
     font-weight: bold;
@@ -337,7 +347,7 @@ h2 {
   font-weight: bold;
   font-style: italic;
   padding-left: 1rem;
-  border-left: .5rem solid var(--pink);
+  border-left: .5rem solid white;
 }
 
 .endcite {
@@ -387,10 +397,10 @@ h2 {
   width: 50%;
 }
 
-.react-mount {
+.react-mount1 {
   position: relative;
-  width: 50vw;
-  height: 33vw;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -650,4 +660,45 @@ h2 {
     margin-left: 0;
     line-height: 120%;
   }
+}
+
+.react-mount {
+  width: 100%;
+  height: 100%;
+}
+
+.sliders {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.slider {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.slider-range {
+  width: 30rem;
+}
+
+.slider-label {
+  width: 1rem;
+  font-size: 2rem;
+  margin-left: 1rem;
+  color: white;
+  margin-right: 2rem;
+  display: inline-block;
+  text-align: left;
+}
+
+.color-label {
+  margin-left: 3rem;
+  font-size: 2.2rem;
+  color: white;
+  display: block;
+  margin-top: 3rem;
+}
+
+li {
+  margin-bottom: 1rem;
 }
