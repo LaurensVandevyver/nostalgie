@@ -1,30 +1,28 @@
-import React, {Component} from 'react';
-import AudioPlayer from '../components/AudioPlayer';
+import React, {PropTypes} from 'react';
+
+const {string} = PropTypes;
 
 
-class App2 extends Component {
+const App2 = ({
+  image,
+  url
+}) => {
 
-  state = {
-    songs: [
-      {
-        image: `../assets/img/album1`,
-        url: `../assets/audio/one.mp3`
-      }
-    ]
-  };
-
-  render() {
-
-    const {songs, image} = this.state;
-
-    return (
+  return (
     <section>
       <img src={image}></img>
-      <AudioPlayer songs={songs} />
+      <audio controls>
+        <source src={url} type='audio/mpeg' />
+      </audio>
     </section>
-    );
-  }
+  );
 
-}
+};
+
+App2.propTypes = {
+  image: string.isRequired,
+  url: string.isRequired
+};
+
 
 export default App2;

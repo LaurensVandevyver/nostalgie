@@ -7,15 +7,31 @@ import App2 from './containers/App2';
 
 const init = () => {
 
-  render (
-    <App  />,
-    document.querySelector(`.react-mount`)
-   );
+  const songs = [
+    {
+      image: `../assets/img/album1.jpg`,
+      url: `../assets/audio/one.mp3`
+    },
+    {
+      image: `../assets/img/album2.jpg`,
+      url: `../assets/audio/two.mp3`
+    },
+    {
+      image: `../assets/img/album3.jpg`,
+      url: `../assets/audio/three.mp3`
+    }
+  ];
 
   render (
-     <App2  />,
-     document.querySelector(`.react-mount2`)
-    );
+    <App />,
+    document.querySelector(`.react-mount`),
+    <App2 song={songs[0]} />,
+    document.querySelector(`.react-mount2`),
+    <App2 song={songs[1]} />,
+    document.querySelector(`.react-mount3`),
+    <App2 song={songs[3]} />,
+    document.querySelector(`.react-mount4`)
+   );
 
 };
 
