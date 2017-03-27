@@ -22,7 +22,7 @@ class Player extends Component {
   }
 
   componentWillUnmount = () => {
-    let playerElement = this.refs.player;
+    const playerElement = this.refs.player;
     playerElement.removeEventListener(`timeupdate`, this.updateProgress);
     playerElement.removeEventListener(`ended`, this.end);
     playerElement.removeEventListener(`error`, this.next);
@@ -65,7 +65,7 @@ class Player extends Component {
   }
 
   end = () => {
-    (this.state.repeat) ? this.play() : this.setState({ play: false });
+    (this.state.repeat) ? this.play() : this.setState({play: false});
   }
 
   next = () => {
@@ -97,7 +97,7 @@ class Player extends Component {
   }
 
   repeat = () => {
-    this.setState({ repeat: !this.state.repeat });
+    this.setState({repeat: !this.state.repeat});
   }
 
   toggleMute = () => {
@@ -111,7 +111,7 @@ class Player extends Component {
 
     const {active, play, progress} = this.state;
 
-    const coverClass = classnames(`player-cover`, {'no-height': !!!active.cover});
+    const coverClass = classnames(`player-cover`, {'no-height': !active.cover});
     const playPauseClass = classnames(`fa`, {'fa-pause': play}, {'fa-play': !play});
     const volumeClass = classnames(`fa`, {'fa-volume-up': !this.state.mute}, {'fa-volume-off': this.state.mute});
     const repeatClass = classnames(`player-btn small repeat`, {'active': this.state.repeat});

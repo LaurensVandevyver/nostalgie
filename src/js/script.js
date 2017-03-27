@@ -3,6 +3,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import App from './containers/App';
+import App2 from './containers/App2';
 
 const init = () => {
 
@@ -10,6 +11,11 @@ const init = () => {
     <App  />,
     document.querySelector(`.react-mount`)
    );
+
+  render (
+     <App2  />,
+     document.querySelector(`.react-mount2`)
+    );
 
 };
 
