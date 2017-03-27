@@ -1,11 +1,30 @@
-// import React, {Component} from 'react';
-//
-// class App2 extends Component {
-//   render() {
-//     return (
-//       <h1> Dit is de app2 </h1>
-//     );
-//   }
-// }
-//
-// export default App2;
+import React, {Component} from 'react';
+import AudioPlayer from '../components/AudioPlayer';
+
+
+class App2 extends Component {
+
+  state = {
+    songs: [
+      {
+        image: `../assets/img/album1`,
+        url: `../assets/audio/one.mp3`
+      }
+    ]
+  };
+
+  render() {
+
+    const {songs, image} = this.state;
+
+    return (
+    <section>
+      <img src={image}></img>
+      <AudioPlayer songs={songs} />
+    </section>
+    );
+  }
+
+}
+
+export default App2;

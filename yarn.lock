@@ -1264,6 +1264,10 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
+classnames@^2.1.2, classnames@^2.2.0:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+
 clean-css@3.4.x:
   version "3.4.25"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-3.4.25.tgz#9e9a52d5c1e6bc5123e1b2783fa65fe958946ede"
@@ -4397,17 +4401,13 @@ miller-rabin@^4.0.0:
     bn.js "^4.0.0"
     brorand "^1.0.1"
 
-"mime-db@>= 1.24.0 < 2":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.27.0.tgz#820f572296bbd20ec25ed55e5b5de869e5436eb1"
+"mime-db@>= 1.24.0 < 2", mime-db@~1.26.0:
+  version "1.26.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.26.0.tgz#eaffcd0e4fc6935cf8134da246e2e6c35305adff"
 
 mime-db@~1.12.0:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.12.0.tgz#3d0c63180f458eb10d325aaa37d7c58ae312e9d7"
-
-mime-db@~1.26.0:
-  version "1.26.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.26.0.tgz#eaffcd0e4fc6935cf8134da246e2e6c35305adff"
 
 mime-types@^2.0.7, mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.13, mime-types@~2.1.7:
   version "2.1.14"
@@ -5662,6 +5662,13 @@ rc@^1.1.2, rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-cl-audio-player@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-cl-audio-player/-/react-cl-audio-player-1.0.0.tgz#59fa5b57993e1c0291ab2ba420d9620518529095"
+  dependencies:
+    classnames "^2.2.0"
+    shuffle-array "^0.1.0"
+
 react-dom@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
@@ -5669,6 +5676,14 @@ react-dom@^15.4.2:
     fbjs "^0.8.1"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+
+react-soundplayer@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/react-soundplayer/-/react-soundplayer-0.3.6.tgz#065e996805eec65191fba917ffc9385570caf315"
+  dependencies:
+    classnames "^2.1.2"
+    object-assign "^4.0.1"
+    soundcloud-audio "^1.0.3"
 
 react@^15.4.2:
   version "15.4.2"
@@ -6120,6 +6135,10 @@ shelljs@^0.7.5:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
+shuffle-array@^0.1.0:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/shuffle-array/-/shuffle-array-0.1.2.tgz#3f0cf0806641a8c703210eafdb923bd65604aa7a"
+
 signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
@@ -6167,6 +6186,10 @@ sort-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-1.1.2.tgz#441b6d4d346798f1b4e49e8920adfba0e543f9ad"
   dependencies:
     is-plain-obj "^1.0.0"
+
+soundcloud-audio@^1.0.3, soundcloud-audio@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/soundcloud-audio/-/soundcloud-audio-1.1.0.tgz#e2ec2da4f8ceefa50f03c013364884a2fc6385a5"
 
 source-list-map@^0.1.7, source-list-map@~0.1.7:
   version "0.1.8"
