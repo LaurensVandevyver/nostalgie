@@ -22,6 +22,13 @@ header {
   justify-content: center;
 }
 
+.headerintro {
+  width: 40rem;
+  background-color: white;
+  padding: 1rem;
+  margin-left: -10rem;
+}
+
 .introcite {
   font-size: 5rem;
   font-weight: bold;
@@ -30,8 +37,9 @@ header {
   line-height: 110%;
   background-color: white;
   position: absolute;
-  bottom: 10rem;
-  margin-left: -17.4rem;
+  top: 10rem;
+  margin-left: 30%;
+  z-index: 9;
   padding: 1.2rem;
 }
 
@@ -39,15 +47,25 @@ header {
   width: 100vw;
   height: 95vh;
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
   align-items: center;
+
+  &::after {
+    content: '';
+    width: 90.9rem;
+    height: 64.6rem;
+    position: absolute;
+    margin-left: 60rem;
+    background-image: url(../assets/img/druipen.png);
+    z-index: 0;
+  }
 }
 
 .nico-headerimage {
-  background-image: url(../assets/img/header-image.png);
+  background-image: url(../assets/img/header-image2.png);
   width: 77.6rem;
   height: 69.6rem;
+  margin-left: 10%;
+  z-index: 1;
 
   &::before {
     content: '';
@@ -60,6 +78,24 @@ header {
     transform: rotate(3deg);
     mix-blend-mode: darken;
   }
+  /*&::after {
+    content: '';
+    width: 90.9rem;
+    height: 64.6rem;
+    position: absolute;
+    margin-left: 30rem;
+    background-image: url(../assets/img/druipen.png);
+    z-index: 0;*/
+}
+
+.druipen {
+  content: '';
+  width: 90.9rem;
+  height: 64.6rem;
+  position: absolute;
+  margin-left: 38%;
+  background-image: url(../assets/img/druipen.png);
+  z-index: 0;
 }
 
 .druip1 {

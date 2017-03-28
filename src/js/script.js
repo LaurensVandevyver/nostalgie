@@ -10,6 +10,7 @@ window.sr = ScrollReveal();
 window.sr.reveal(`.intro`);
 window.sr.reveal(`.articlestyle`);
 window.sr.reveal(`.articlestyle2`);
+//window.sr.reveal(`.left`, viewOffset: { top: 0, right: 0, bottom: 0, left: -100 });
 
 const active = 0;
 
