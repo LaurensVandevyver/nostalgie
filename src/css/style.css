@@ -152,6 +152,24 @@ strong {
 
 .modelsection {
   margin-top: 20rem;
+  display: flex;
+}
+
+.modelteksten {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-img {
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 10rem;
+  height: 56rem;
+}
+
+.img-container {
+  width: 30rem;
+  right: 5rem;
 }
 
 .modelcite {
@@ -395,19 +413,6 @@ h2 {
   width: 65rem;
 }
 
-.content-img {
-  opacity: 0;
-  visibility: hidden;
-  right: 10%;
-  top: 10%;
-}
-
-.img-container {
-  height: 50%;
-  top: 5%;
-  width: 50%;
-}
-
 .react-mount1 {
   position: relative;
   width: 100%;
@@ -481,6 +486,12 @@ input[type=range]::-webkit-slider-thumb {
   font-family: times;
   font-style: italic;
   color: black;
+}
+
+.focus {
+  opacity: 1;
+  transition: opacity .8s;
+  visibility: visible;
 }
 
 @media (width <= 960px) {
