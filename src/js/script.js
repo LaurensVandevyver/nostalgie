@@ -3,13 +3,21 @@
 import React from 'react';
 import {render} from 'react-dom';
 import App from './containers/App';
+import ScrollReveal from 'ScrollReveal';
 // import App2 from './containers/App2';
+
+window.sr = ScrollReveal();
+window.sr.reveal(`.intro`);
+window.sr.reveal(`.articlestyle`);
+window.sr.reveal(`.articlestyle2`);
 
 const active = 0;
 
 const onScroll = () => {
   window.requestAnimationFrame(() => {
-    focusElements();
+    if (window.innerWidth >= 960) {
+      focusElements();
+    }
   });
 };
 
@@ -22,7 +30,7 @@ const focusElements = () => {
 };
 
 const focusSection = id => {
-  const $prevSection = document.querySelector(`model.focus`);
+  const $prevSection = document.querySelector(`model2 .focus`);
   if ($prevSection) {
     $prevSection.classList.remove(`focus`);
   }

@@ -6027,6 +6027,10 @@ sax@~1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"
 
+scrollreveal@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/scrollreveal/-/scrollreveal-3.3.4.tgz#4938fb5022a99e90d9de3b3fecc77662e320191d"
+
 seek-bzip@^1.0.3:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/seek-bzip/-/seek-bzip-1.0.5.tgz#cfe917cb3d274bcffac792758af53173eb1fabdc"

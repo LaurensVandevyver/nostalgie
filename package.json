@@ -49,6 +49,7 @@
   "dependencies": {
     "react-cl-audio-player": "^1.0.0",
     "react-soundplayer": "^0.3.6",
+    "scrollreveal": "^3.3.4",
     "soundcloud-audio": "^1.1.0"
   }
 }
