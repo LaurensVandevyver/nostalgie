@@ -35,11 +35,10 @@ const focusElements = () => {
 };
 
 const fixImages = () => {
-  const modelcontainer = document.querySelector(`.modelsection`);
-  const top = modelcontainer.getBoundingClientRect().top;
-  if (top === 199) {
-    document.querySelector(`.img-container`).classList.add(`.fixed`);
-  }
+  // const $modelsection = document.querySelector(`.modelsection`);
+  // const clientrect = $modelsection.getBoundingClientRect().top;
+  // const intViewport = window.innerHeight;
+  // console.log(clientrect, intViewports);
 };
 
 const getCenterElement = () => {
