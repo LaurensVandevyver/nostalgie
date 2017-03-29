@@ -35,10 +35,12 @@ const focusElements = () => {
 };
 
 const fixImages = () => {
-  //const body = document.body; //IE 'quirks'
-  const document = document.querySelector(`.modelcontainer`); //IE with doctype
-  const hoogte = document.clientHight();
-  console.log(hoogte);
+  const modelcontainer = document.querySelector(`.modelsection`);
+  const top = modelcontainer.getBoundingClientRect().top;
+  console.log(top);
+  if (top === 199) {
+    document.querySelector(`.img-container`).classList.add(`.fixed`);
+  }
 };
 
 const focusImage = id => {
