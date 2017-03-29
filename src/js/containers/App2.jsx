@@ -8,8 +8,24 @@ const App2 = ({
   url
 }) => {
 
+  // const songs = [
+  //   {
+  //     image: `../assets/img/album1.jpg`,
+  //     url: `../assets/audio/one.mp3`
+  //   },
+  //   {
+  //     image: `../assets/img/album2.jpg`,
+  //     url: `../assets/audio/two.mp3`
+  //   },
+  //   {
+  //     image: `../assets/img/album3.jpg`,
+  //     url: `../assets/audio/three.mp3`
+  //   }
+  // ];
+
   return (
     <section>
+      <h1>dit is app 2</h1>
       <img src={image}></img>
       <audio controls>
         <source src={url} type='audio/mpeg' />

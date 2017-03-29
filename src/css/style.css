@@ -23,10 +23,22 @@ header {
 }
 
 .headerintro {
-  width: 40rem;
+  width: 36rem;
   background-color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-left: -10rem;
+  z-index: 99;
+
+  &::first-letter {
+    color: var(--blue);
+    float: left;
+    font-family: times;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 3rem;
+    padding-top: 2rem;
+    padding-right: .7rem;
+  }
 }
 
 .introcite {
@@ -49,7 +61,7 @@ header {
   display: flex;
   align-items: center;
 
-  &::after {
+  /*&::after {
     content: '';
     width: 90.9rem;
     height: 64.6rem;
@@ -57,7 +69,7 @@ header {
     margin-left: 60rem;
     background-image: url(../assets/img/druipen.png);
     z-index: 0;
-  }
+  }*/
 }
 
 .nico-headerimage {
@@ -66,6 +78,11 @@ header {
   height: 69.6rem;
   margin-left: 10%;
   z-index: 1;
+
+  animation-name: nico;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 
   &::before {
     content: '';
@@ -78,15 +95,26 @@ header {
     transform: rotate(3deg);
     mix-blend-mode: darken;
   }
-  /*&::after {
-    content: '';
-    width: 90.9rem;
-    height: 64.6rem;
-    position: absolute;
-    margin-left: 30rem;
-    background-image: url(../assets/img/druipen.png);
-    z-index: 0;*/
 }
+
+/* @keyframes nico {
+
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(20%, 0);
+  }
+} */
 
 .druipen {
   content: '';
@@ -174,7 +202,7 @@ strong {
 }
 
 .model {
-  width: 34rem;
+  width: 40rem;
   margin-top: 10rem;
 }
 
@@ -530,6 +558,50 @@ input[type=range]::-webkit-slider-thumb {
   visibility: visible;
 }
 
+.year {
+  font-family: times;
+  color: var(--yellow);
+  font-size: 20rem;
+  position: absolute;
+  font-weight: bold;
+  margin-top: -50rem;
+  padding: 1rem;
+  /*transform: rotate(-10deg);*/
+}
+
+.anim {
+  font-family: times;
+  color: var(--yellow);
+  font-size: 20rem;
+  position: absolute;
+  font-weight: bold;
+  margin-top: -50rem;
+  padding: 1rem;
+  animation-name: year;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes year {
+
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(20%, 0);
+  }
+}
+
 @media (width <= 960px) {
 
   .content {
@@ -654,6 +726,10 @@ input[type=range]::-webkit-slider-thumb {
   .velvettitle {
     margin-left: 0;
     line-height: 120%;
+  }
+
+  .react-mount1 {
+    background-position: center;
   }
 }
 

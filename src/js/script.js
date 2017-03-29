@@ -4,17 +4,21 @@ import React from 'react';
 import {render} from 'react-dom';
 import App from './containers/App';
 import ScrollReveal from 'ScrollReveal';
-// import App2 from './containers/App2';
+import App2 from './containers/App2';
 
 window.sr = ScrollReveal();
-window.sr.reveal(`.intro`);
-window.sr.reveal(`.articlestyle`);
-window.sr.reveal(`.articlestyle2`);
 //window.sr.reveal(`.left`, viewOffset: { top: 0, right: 0, bottom: 0, left: -100 });
 
 const active = 0;
 
+const revealText = () => {
+  window.sr.reveal(`.intro`);
+  window.sr.reveal(`.articlestyle`);
+  window.sr.reveal(`.articlestyle2`);
+};
+
 const onScroll = () => {
+  revealText();
   window.requestAnimationFrame(() => {
     if (window.innerWidth >= 960) {
       focusElements();
@@ -68,33 +72,45 @@ const getCenterElement = () => {
 
 const init = () => {
 
+  const songs = [
+    {
+      image: `../assets/img/album1.jpg`,
+      url: `../assets/audio/one.mp3`
+    },
+    {
+      image: `../assets/img/album2.jpg`,
+      url: `../assets/audio/two.mp3`
+    },
+    {
+      image: `../assets/img/album3.jpg`,
+      url: `../assets/audio/three.mp3`
+    }
+  ];
+
   render (
     <App />,
     document.querySelector(`.react-mount`),
-    // <App2 song={songs[0]} />,
-    // document.querySelector(`.react-mount2`),
     // <App2 song={songs[1]} />,
     // document.querySelector(`.react-mount3`),
     // <App2 song={songs[3]} />,
     // document.querySelector(`.react-mount4`)
    );
 
-  window.addEventListener(`scroll`, onScroll);
+  render (
+    <App2 song={songs[0]} />,
+    document.querySelector(`.react-mount2`),
+    // <App2 song={songs[1]} />,
+    // document.querySelector(`.react-mount3`),
+    // <App2 song={songs[3]} />,
+    // document.querySelector(`.react-mount4`)
+   );
 
-  // const songs = [
-  //   {
-  //     image: `../assets/img/album1.jpg`,
-  //     url: `../assets/audio/one.mp3`
-  //   },
-  //   {
-  //     image: `../assets/img/album2.jpg`,
-  //     url: `../assets/audio/two.mp3`
-  //   },
-  //   {
-  //     image: `../assets/img/album3.jpg`,
-  //     url: `../assets/audio/three.mp3`
-  //   }
-  // ];
+  // render (
+  //    <App2 song={songs[0]} />,
+  //    document.querySelector(`.react-mount2`)
+  //  );
+
+  window.addEventListener(`scroll`, onScroll);
 
 };
 

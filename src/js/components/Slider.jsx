@@ -1,12 +1,12 @@
 // proptypes ook importen want er worden props meegegeven
 import React, {PropTypes} from 'react';
 // al meegeven dat deze datatypes proptypes zijn
-const {number, func} = PropTypes;
-
+const {number, func, string} = PropTypes;
 
 const Slider = ({
   value,
-  onChangeYear
+  onChangeYear,
+  classp
 }) => {
 
   const handleChangeYear = e => {
@@ -26,7 +26,7 @@ const Slider = ({
     // OnChange: voert handle func uit
 
     <article className='slider'>
-
+      <p className={classp}> {value + 1952} </p>
       <input
         className='slider-range'
         value={value} type='range'
@@ -43,7 +43,8 @@ const Slider = ({
 Slider.propTypes = {
   // integer bestaat niet in PropTypes, number gebruiken
   value: number.isRequired,
-  onChangeYear: func.isRequired
+  onChangeYear: func.isRequired,
+  classp: string.isRequired
 };
 
 
