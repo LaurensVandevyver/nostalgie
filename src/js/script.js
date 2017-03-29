@@ -2,9 +2,9 @@
 
 import React from 'react';
 import {render} from 'react-dom';
-import App from './containers/App';
+import AppSlider from './containers/AppSlider';
 import ScrollReveal from 'ScrollReveal';
-import App2 from './containers/App2';
+import AppPlaylist from './containers/AppPlaylist';
 
 window.sr = ScrollReveal();
 //window.sr.reveal(`.left`, viewOffset: { top: 0, right: 0, bottom: 0, left: -100 });
@@ -140,27 +140,15 @@ const init = () => {
   ];
 
   render (
-    <App />,
-    document.querySelector(`.react-mount`),
-    // <App2 song={songs[1]} />,
-    // document.querySelector(`.react-mount3`),
-    // <App2 song={songs[3]} />,
-    // document.querySelector(`.react-mount4`)
+    <AppSlider />,
+    document.querySelector(`.react-mount`)
    );
 
-  render (
-    <App2 song={songs[0]} />,
-    document.querySelector(`.react-mount2`),
-    // <App2 song={songs[1]} />,
-    // document.querySelector(`.react-mount3`),
-    // <App2 song={songs[3]} />,
-    // document.querySelector(`.react-mount4`)
-   );
-
-  // render (
-  //    <App2 song={songs[0]} />,
-  //    document.querySelector(`.react-mount2`)
-  //  );
+  for (let i = 0;i < songs.length;i ++) {
+    render (
+      <AppPlaylist image={songs[i].image} url={songs[i].url} />, document.querySelector(`.react-mount${2 + i}`)
+    );
+  }
 
   window.addEventListener(`scroll`, onScroll);
 
