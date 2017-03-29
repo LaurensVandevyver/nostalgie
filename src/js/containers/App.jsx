@@ -17,7 +17,7 @@ class App extends Component {
 
     setTimeout(() => {
       this.setState({anim: true});
-    });
+    }, 10);
 
     this.setState({value: value});
 

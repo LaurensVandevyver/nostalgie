@@ -22,6 +22,7 @@ const onScroll = () => {
   window.requestAnimationFrame(() => {
     if (window.innerWidth >= 960) {
       focusElements();
+      fixImages();
     }
   });
 };
@@ -29,29 +30,31 @@ const onScroll = () => {
 const focusElements = () => {
   const center = getCenterElement();
   if (center !== active) {
-    focusSection(center);
     focusImage(center);
   }
 };
 
-const focusSection = id => {
-  const $prevSection = document.querySelector(`model2 .focus`);
-  if ($prevSection) {
-    $prevSection.classList.remove(`focus`);
-  }
-
-  const $nextSection = document.querySelector(`.model[data-id="${id}"]`);
-  $nextSection.classList.add(`focus`);
+const fixImages = () => {
+  //const body = document.body; //IE 'quirks'
+  const document = document.querySelector(`.modelcontainer`); //IE with doctype
+  const hoogte = document.clientHight();
+  console.log(hoogte);
 };
 
 const focusImage = id => {
-  const $prevImg = document.querySelector(`img.focus`);
-  if ($prevImg) {
-    $prevImg.classList.remove(`focus`);
+  if (id === 1) {
+    document.querySelector(`.content-img1`).style.opacity = 1;
+    document.querySelector(`.content-img2`).style.opacity = 0;
+    document.querySelector(`.content-img3`).style.opacity = 0;
+  } else if (id === 2) {
+    document.querySelector(`.content-img1`).style.opacity = 0;
+    document.querySelector(`.content-img2`).style.opacity = 1;
+    document.querySelector(`.content-img3`).style.opacity = 0;
+  } else {
+    document.querySelector(`.content-img1`).style.opacity = 0;
+    document.querySelector(`.content-img2`).style.opacity = 0;
+    document.querySelector(`.content-img3`).style.opacity = 1;
   }
-
-  const $nextImg = document.querySelector(`img[data-id="${id}"]`);
-  $nextImg.classList.add(`focus`);
 };
 
 const getCenterElement = () => {
@@ -69,6 +72,53 @@ const getCenterElement = () => {
 
   return id;
 };
+
+// const focusElements = () => {
+//   const center = getCenterElement();
+//   if (center !== active) {
+//     focusSection(center);
+//     focusImage(center);
+//   }
+// };
+//
+// const focusSection = id => {
+//   const $prevSection = document.querySelector(`model2 .focus`);
+//   if ($prevSection) {
+//     $prevSection.classList.remove(`focus`);
+//   }
+//
+//   const $nextSection = document.querySelector(`.model[data-id="${id}"]`);
+//   $nextSection.classList.add(`focus`);
+// };
+//
+// const focusImage = id => {
+//   const $prevImg = document.querySelector(`img.focus`);
+//   if ($prevImg) {
+//     //$prevImg.classList.add(`fadeout`);
+//     // $prevImg.classList.remove(`focus`);
+//     $prevImg.style.opacity = 0;
+//   }
+//
+//   const $nextImg = document.querySelector(`img[data-id="${id}"]`);
+//   $nextImg.classList.add(`focus`);
+//   $nextImg.style.opacity = `.9`;
+// };
+//
+// const getCenterElement = () => {
+//   const sections = document.querySelectorAll(`.model`);
+//   const center = window.innerHeight * 0.4;
+//   let id = 1;
+//
+//   sections.forEach($section => {
+//     const top = $section.getBoundingClientRect().top;
+//     const bottom = $section.getBoundingClientRect().bottom;
+//     if (center > top && center < bottom) {
+//       id = parseInt($section.dataset.id);
+//     }
+//   });
+//
+//   return id;
+// };
 
 const init = () => {
 
