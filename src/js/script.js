@@ -37,7 +37,6 @@ const focusElements = () => {
 const fixImages = () => {
   const modelcontainer = document.querySelector(`.modelsection`);
   const top = modelcontainer.getBoundingClientRect().top;
-  console.log(top);
   if (top === 199) {
     document.querySelector(`.img-container`).classList.add(`.fixed`);
   }
