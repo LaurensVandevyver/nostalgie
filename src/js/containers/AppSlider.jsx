@@ -4,8 +4,6 @@ import Slider from '../components/Slider';
 
 class App extends Component {
 
-  // de kanalen in de state zetten omdat die alsmaar veranderen
-  // dit is het enige dat in de state moet
   state = {
     value: 0,
     anim: true
@@ -17,7 +15,7 @@ class App extends Component {
 
     setTimeout(() => {
       this.setState({anim: true});
-    }, 10);
+    });
 
     this.setState({value: value});
 
