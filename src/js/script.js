@@ -23,6 +23,9 @@ const onScroll = () => {
     if (window.innerWidth >= 960) {
       focusElements();
       fixImages();
+    } else {
+      const container = document.querySelector(`.img-container`);
+      console.log(container);
     }
   });
 };
