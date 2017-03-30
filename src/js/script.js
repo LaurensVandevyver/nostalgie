@@ -52,7 +52,7 @@ const onScroll = () => {
 const checkScrollVelvet = () => {
   const $image = document.querySelector(`.drolletje`);
   const topImage = $image.getBoundingClientRect().top;
-  console.log(topImage);
+  //console.log(topImage);
   if (topImage <= - 100 && topImage >= - 200) {
     $image.style.backgroundImage = `none`;
   } else if (topImage <= - 200 && topImage >= - 300) {

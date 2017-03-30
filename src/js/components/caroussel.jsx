@@ -11,7 +11,11 @@ class App extends React.Component {
         `../assets/img/caroussel3.jpg`,
         `../assets/img/caroussel4.jpg`,
         `../assets/img/caroussel5.jpg`,
-        `../assets/img/caroussel6.jpg`
+        `../assets/img/caroussel6.jpg`,
+        `../assets/img/caroussel7.jpg`,
+        `../assets/img/caroussel8.jpg`,
+        `../assets/img/caroussel9.jpg`,
+        `../assets/img/caroussel10.jpg`
       ],
       current: 0,
       isNext: true

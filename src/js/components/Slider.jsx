@@ -31,7 +31,7 @@ const Slider = ({
         className='slider-range'
         value={value} type='range'
         onChange={handleChangeYear}
-        max='5'
+        max='10'
       />
 
     </article>
