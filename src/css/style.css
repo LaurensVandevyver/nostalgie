@@ -60,16 +60,6 @@ header {
   height: 95vh;
   display: flex;
   align-items: center;
-
-  /*&::after {
-    content: '';
-    width: 90.9rem;
-    height: 64.6rem;
-    position: absolute;
-    margin-left: 60rem;
-    background-image: url(../assets/img/druipen.png);
-    z-index: 0;
-  }*/
 }
 
 .nico-headerimage {
@@ -95,62 +85,6 @@ header {
     transform: rotate(3deg);
     mix-blend-mode: darken;
   }
-}
-
-/* @keyframes nico {
-
-  0% {
-    transform: translate(0, 0);
-  }
-
-  10% {
-    opacity: 0;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translate(20%, 0);
-  }
-} */
-
-.druipen {
-  content: '';
-  width: 90.9rem;
-  height: 64.6rem;
-  position: absolute;
-  margin-left: 38%;
-  background-image: url(../assets/img/druipen.png);
-  z-index: 0;
-}
-
-.druip1 {
-  background-image: url(../assets/img/druip1.png);
-  width: 89.5rem;
-  height: 67.7rem;
-  position: absolute;
-  left: 0;
-  z-index: -2;
-}
-
-.druip2 {
-  background-image: url(../assets/img/druip2.png);
-  width: 110.4rem;
-  height: 63rem;
-  position: absolute;
-  left: 0;
-  z-index: -1;
-}
-
-.druip3 {
-  background-image: url(../assets/img/druip3.png);
-  width: 110.4rem;
-  height: 63rem;
-  position: absolute;
-  left: 0;
-  z-index: 1;
 }
 
 main {
@@ -234,6 +168,7 @@ strong {
 .modelsection {
   right: -20rem;
   margin-top: 20rem;
+  margin-bottom: 20rem;
   display: flex;
 }
 
@@ -327,9 +262,45 @@ strong {
 }
 
 .gallery {
+  position: relative;
   width: 100vw;
   height: 80vh;
   background-color: var(--pink);
+}
+
+.diamanten {
+  position: absolute;
+  right: 0;
+  top: -15rem;
+  width: 40rem;
+  height: 40rem;
+}
+
+.diamant1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/diamant1.png);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.diamant2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/diamant2.png);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.diamant3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/diamant3.png);
+  background-repeat: no-repeat;
+  z-index: -5;
 }
 
 .velvet-header {
@@ -369,8 +340,9 @@ strong {
   top: 0;
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 100%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 68.4rem;
   z-index: 20;
 }
 
@@ -410,20 +382,22 @@ h2 {
 .parallaxSection1 {
   position: relative;
   margin-top: 5rem;
-  height: 70vh;
+  height: 80vh;
   width: 100vw;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .parallaxItem1 {
   position: absolute;
-  left: 0;
   top: 0;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  width: 100%;
+  height: 100rem;
+  width: 170rem;
 }
 
 .parallax1 {
@@ -490,12 +464,6 @@ h2 {
 .undergroundstyle {
   width: 50rem;
 }
-
-/*.react-mount2 {
-  width: 25rem;
-  height: 25rem;
-  background-color: var(--yellow);
-}*/
 
 .albumContainer {
   display: flex;
@@ -579,6 +547,18 @@ h2 {
   color: #cdcdcd;
 }
 
+.darkBackground {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100rem;
+  height: 100rem;
+  background-image: url(../assets/img/darkbackground.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  z-index: 0;
+}
+
 .articlestyle2 {
   font-size: 1.7rem;
   line-height: 2.8rem;
@@ -633,6 +613,7 @@ h2 {
   font-style: italic;
   padding-left: 1rem;
   border-left: .5rem solid white;
+  z-index: 5;
 }
 
 .endcite {
@@ -814,7 +795,7 @@ footer {
 }
 
 .description {
-  width: 30vw;
+  width: 35vw;
   margin-top: 5rem;
   color: white;
   text-align: center;
@@ -918,6 +899,21 @@ footer {
 
 @media (width <= 800px) {
 
+  .parallaxSection1 {
+    position: relative;
+    margin-top: 5rem;
+    height: 40rem;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .parallaxItem1 {
+    width: 150rem;
+  }
+
   .overgangcite {
     font-size: 3rem;
   }
@@ -968,6 +964,22 @@ footer {
 }
 
 @media (width <= 630px) {
+
+  .parallaxSection1 {
+    width: 100vw;
+    height: 53rem;
+  }
+
+  .parallax1 {
+    background-image: url(../assets/img/nico1.jpg);
+    background-size: contain;
+    width: 63rem;
+    height: 53rem;
+  }
+
+  .parallax2, .parallax3, .parallax4 {
+    background-image: none;
+  }
 
   .overgangcite {
     top: -10rem;

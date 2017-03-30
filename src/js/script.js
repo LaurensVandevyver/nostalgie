@@ -3,11 +3,10 @@
 import React from 'react';
 import {render} from 'react-dom';
 import AppSlider from './containers/AppSlider';
-import ScrollReveal from 'ScrollReveal';
 import AppPlaylist from './containers/AppPlaylist';
+//import ScrollReveal from 'ScrollReveal';
 
-window.sr = ScrollReveal();
-
+//window.sr = ScrollReveal();
 const songs = [
   {
     image: `../assets/img/album1.jpg`,
@@ -27,59 +26,68 @@ const songs = [
   }
 ];
 
+// const revealText = () => {
+//   window.sr.reveal(`.intro`);
+//   window.sr.reveal(`.articlestyle`);
+//   window.sr.reveal(`.articlestyle2`);
+//   window.sr.reveal(`cite`);
+//   window.sr.reveal(`.albumContainer`);
+// };
 
-const revealText = () => {
-  window.sr.reveal(`.intro`);
-  window.sr.reveal(`.articlestyle`);
-  window.sr.reveal(`.articlestyle2`);
-  window.sr.reveal(`cite`);
-  window.sr.reveal(`.albumContainer`);
+const parallax = () => {
+  const parallax1 = document.querySelectorAll(`.parallaxItem1`);
+  const parallax2 = document.querySelectorAll(`.parallaxItem2`);
+  const parallax3 = document.querySelectorAll(`.parallaxItem3`);
+  const parallaxItemTop = document.querySelector(`.parallaxSection2`).getBoundingClientRect().top;
+
+  parallax1.forEach((el, i) => {
+    const speed = - 0.09 * (i + 1);
+    const windowYOffset = window.pageYOffset, elBackgrounPos = `0%${windowYOffset * speed}px`;
+    el.style.backgroundPosition = elBackgrounPos;
+  });
+
+  parallax2.forEach((el, i) => {
+    const speed = - 0.1 * (i + 1);
+    const windowYOffset = parallaxItemTop, elBackgrounPos = `0%${windowYOffset * speed}px`;
+    el.style.backgroundPosition = elBackgrounPos;
+  });
+
+  parallax3.forEach((el, i) => {
+    const speed = - 0.1 * (i + 1);
+    const windowYOffset = parallaxItemTop, elBackgrounPos = `0%${windowYOffset * speed}px`;
+    el.style.backgroundPosition = elBackgrounPos;
+  });
 };
 
 const onScroll = () => {
-
-  revealText();
-
+  //revealText();
   requestAnimationFrame(() => {
-
     if (innerWidth >= 800) {
+      parallax();
       checkContainer();
       focusElements();
-      //fixImages();
       checkScrollVelvet();
     }
-
-
-
   });
-
 };
 
 const checkScrollVelvet = () => {
   const $image = document.querySelector(`.drolletje`);
   const topImage = $image.getBoundingClientRect().top;
-  //console.log(topImage);
-  if (topImage <= - 100 && topImage >= - 200) {
-    $image.style.backgroundImage = `none`;
-  } else if (topImage <= - 200 && topImage >= - 300) {
-    $image.style.backgroundImage = `url(../assets/img/nico2_2.png)`;
-  } else if (topImage <= - 300 && topImage >= - 400) {
-    $image.style.backgroundImage = `url(../assets/img/nico2_3.png)`;
-  } else if (topImage <= - 400 && topImage >= - 500) {
-    $image.style.backgroundImage = `url(../assets/img/nico2_4.png)`;
-  } else if (topImage <= - 500 && topImage >= - 600) {
-    $image.style.backgroundImage = `url(../assets/img/nico2_5.png)`;
-  } else if (topImage <= - 600 && topImage >= - 700) {
-    $image.style.backgroundImage = `url(../assets/img/nico2_6.png)`;
-  }  else if (topImage <= - 700 && topImage >= - 800) {
-    $image.style.backgroundImage = `url(../assets/img/nico2_7.png)`;
-  }  else if (topImage <= - 800) {
-    $image.style.backgroundImage = `none`;
+
+  console.log(topImage);
+
+  for (let i = 2;i < 7;i ++) {
+    if (topImage <= i * (- 100) && topImage >= i * (- 100) - 100) {
+      $image.style.backgroundImage = `url(../assets/img/nico2_${i}.png)`;
+    } else if (topImage >= 0 || topImage <= - 600) {
+      $image.style.backgroundImage = `none`;
+    }
   }
 };
 
 const checkContainer = () => {
-  const center = window.innerHeight * 0.4;
+  const center = window.innerHeight * 0.2;
   const $container = document.querySelector(`.img-container`);
   const topContainer = $container.getBoundingClientRect().top;
   const bottomContainer = $container.getBoundingClientRect().bottom;
@@ -134,31 +142,8 @@ const focusImage = id => {
   }
 };
 
-const parallax = () => {
-
-  const parallax = [...document.querySelectorAll(`.parallaxItems1`)];
-
-  addEventListener(`scroll`, () => {
-
-    parallax.forEach((el, i) => {
-      const speed = - 0.1 * (i / 1.2);
-      const windowYOffset = window.pageYOffset, elBackgrounPos = `0%${windowYOffset * speed}px`;
-      el.style.backgroundPosition = elBackgrounPos;
-    });
-
-    parallax.forEach((el, i) => {
-      const speed = - 0.1 * (i / 1.2);
-      const windowYOffset = window.pageYOffset, elBackgrounPos = `0%${windowYOffset * speed}px`;
-      el.style.backgroundPosition = elBackgrounPos;
-    });
-
-  });
-
-};
-
 const init = () => {
 
-  parallax();
   addEventListener(`scroll`, onScroll);
 
   render (
