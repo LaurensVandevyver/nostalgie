@@ -7,9 +7,7 @@ import ScrollReveal from 'ScrollReveal';
 import AppPlaylist from './containers/AppPlaylist';
 
 window.sr = ScrollReveal();
-//window.sr.reveal(`.left`, viewOffset: { top: 0, right: 0, bottom: 0, left: -100 });
 
-//const active = 0;
 const songs = [
   {
     image: `../assets/img/album1.jpg`,
@@ -41,10 +39,10 @@ const revealText = () => {
 const onScroll = () => {
   revealText();
   window.requestAnimationFrame(() => {
-    if (window.innerWidth >= 960) {
+    if (window.innerWidth >= 800) {
       checkContainer();
       focusElements();
-      fixImages();
+      //fixImages();
       checkScrollVelvet();
     }
 
@@ -88,14 +86,7 @@ const checkContainer = () => {
 
 const focusElements = () => {
   const center = getCenterElement();
-  //if (center !== active) {
   focusImage(center);
-  //}
-};
-
-const fixImages = () => {
-  //const $modelsection = document.querySelector(`.modelsection`);
-  //const clientrect = $modelsection.getBoundingClientRect().top;
 };
 
 const getCenterElement = () => {

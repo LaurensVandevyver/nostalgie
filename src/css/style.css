@@ -211,7 +211,7 @@ strong {
   }
 
   &:last-of-type {
-    margin-bottom: 30rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -241,9 +241,9 @@ strong {
   background-image: url(../assets/img/one.png);
   width: 35.8rem;
   height: 46rem;
-  margin-bottom: 5rem;
   align-self: center;
   display: none;
+  border: 1px solid red;
 }
 
 .model-image2 {
@@ -266,6 +266,7 @@ strong {
 .modelteksten {
   display: flex;
   flex-direction: column;
+  border: 1px solid blue;
 }
 
 .content-img {
@@ -281,9 +282,10 @@ strong {
   position: fixed;
   top: 0;
   right: 0;
-  right: 5rem;
-  width: 60rem;
+  right: 1rem;
+  width: 37rem;
   height: 60rem;
+  margin-top: 10rem;
   overflow: hidden;
 }
 
@@ -785,6 +787,13 @@ input[type=range]::-webkit-slider-thumb {
   }
 }
 
+@media (width <= 1050px) {
+
+  .model {
+    width: 40vw;
+  }
+}
+
 @media (width <= 960px) {
 
   .content {
@@ -800,8 +809,12 @@ input[type=range]::-webkit-slider-thumb {
   }
 
   .model {
-    width: 50vw;
-    height: 60vh;
+    width: 35vw;
+  }
+
+  .modelcite {
+    margin-left: 1rem;
+    width: 40vw;
   }
 
   .model2 {
@@ -844,6 +857,42 @@ input[type=range]::-webkit-slider-thumb {
     background-image: url(../assets/img/nico75.jpg);
     height: 46rem;
   }
+
+  .year {
+    font-size: 3rem;
+    border: 1px solid red;
+  }
+}
+
+@media (width <= 800px) {
+
+  .img-container {
+    display: hidden;
+    height: 0;
+  }
+
+  .model {
+    width: 90vw;
+  }
+
+  .modelcite {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+
+  .model-image1, .model-image2, .model-image3 {
+    display: inline-block;
+  }
+
+  &:first-of-type {
+    margin-top: 5rem;
+    padding-bottom: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
 }
 
 @media (width <= 720px) {
@@ -879,10 +928,6 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 @media (width <= 600px) {
-
-  .model-image1, .model-image2, .model-image3 {
-    display: inline-block;
-  }
 
   .underground {
     width: 90vw;
