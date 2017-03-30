@@ -23,7 +23,7 @@ class AppPlaylist extends Component {
     }
 
     return (
-      <section>
+      <section className='albumContainer'>
         <img src={image} />
         <p>{url}</p>
         <button onClick={this.handlePlay}>Play</button>
