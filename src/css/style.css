@@ -790,6 +790,36 @@ input[type=range]::-webkit-slider-thumb {
   }
 }
 
+footer {
+  background-color: var(--yellow);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nostalgie {
+  width: 90vw;
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  background-image: url(../assets/img/logo.png);
+  width: 20rem;
+  height: 9rem;
+}
+
+.description {
+  width: 30vw;
+  margin-top: 5rem;
+  color: white;
+  text-align: center;
+}
+
 @media (width <= 1050px) {
 
   .model {
@@ -879,6 +909,10 @@ input[type=range]::-webkit-slider-thumb {
 
   .voorna-image {
     height: 56.5rem;
+  }
+
+  .description {
+    width: 90vw;
   }
 }
 
