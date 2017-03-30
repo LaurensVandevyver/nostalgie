@@ -37,16 +37,22 @@ const revealText = () => {
 };
 
 const onScroll = () => {
+
   revealText();
-  window.requestAnimationFrame(() => {
-    if (window.innerWidth >= 800) {
+
+  requestAnimationFrame(() => {
+
+    if (innerWidth >= 800) {
       checkContainer();
       focusElements();
       //fixImages();
       checkScrollVelvet();
     }
 
+
+
   });
+
 };
 
 const checkScrollVelvet = () => {
@@ -129,20 +135,31 @@ const focusImage = id => {
 };
 
 const parallax = () => {
-  const parallax = document.querySelectorAll(`.parallaxItems`);
-  window.onscroll = function() {
-    [].slice.call(parallax).forEach(function(el, i) {
+
+  const parallax = [...document.querySelectorAll(`.parallaxItems1`)];
+
+  addEventListener(`scroll`, () => {
+
+    parallax.forEach((el, i) => {
       const speed = - 0.1 * (i / 1.2);
       const windowYOffset = window.pageYOffset, elBackgrounPos = `0%${windowYOffset * speed}px`;
       el.style.backgroundPosition = elBackgrounPos;
     });
-  };
+
+    parallax.forEach((el, i) => {
+      const speed = - 0.1 * (i / 1.2);
+      const windowYOffset = window.pageYOffset, elBackgrounPos = `0%${windowYOffset * speed}px`;
+      el.style.backgroundPosition = elBackgrounPos;
+    });
+
+  });
+
 };
 
 const init = () => {
 
   parallax();
-  window.addEventListener(`scroll`, onScroll);
+  addEventListener(`scroll`, onScroll);
 
   render (
     <AppSlider />,

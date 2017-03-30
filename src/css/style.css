@@ -49,8 +49,8 @@ header {
   line-height: 110%;
   background-color: white;
   position: absolute;
-  top: 30rem;
-  margin-left: 45%;
+  top: 20rem;
+  margin-left: 35%;
   z-index: 9;
   padding: 1.2rem;
 }
@@ -243,7 +243,6 @@ strong {
   height: 46rem;
   align-self: center;
   display: none;
-  border: 1px solid red;
 }
 
 .model-image2 {
@@ -266,7 +265,6 @@ strong {
 .modelteksten {
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
 }
 
 .content-img {
@@ -691,7 +689,6 @@ h2 {
 
 .hidden {
   display: none;
-  border: 1px solid yellow;
 }
 
 .italic {
@@ -760,17 +757,6 @@ input[type=range]::-webkit-slider-thumb {
   visibility: visible;
 }
 
-.year {
-  font-family: times;
-  color: var(--yellow);
-  font-size: 20rem;
-  position: absolute;
-  font-weight: bold;
-  margin-top: -50rem;
-  padding: 1rem;
-  /*transform: rotate(-10deg);*/
-}
-
 .anim {
   font-family: times;
   color: var(--yellow);
@@ -808,6 +794,10 @@ input[type=range]::-webkit-slider-thumb {
 
   .model {
     width: 40vw;
+  }
+
+  .overgangcite {
+    font-size: 4rem;
   }
 }
 
@@ -875,9 +865,8 @@ input[type=range]::-webkit-slider-thumb {
     height: 46rem;
   }
 
-  .year {
-    font-size: 3rem;
-    border: 1px solid red;
+  .anim {
+    font-size: 12rem;
   }
 
   .voor {
@@ -894,6 +883,10 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 @media (width <= 800px) {
+
+  .overgangcite {
+    font-size: 3rem;
+  }
 
   .img-container {
     display: hidden;
@@ -942,6 +935,13 @@ input[type=range]::-webkit-slider-thumb {
 
 @media (width <= 630px) {
 
+  .overgangcite {
+    top: -10rem;
+    width: 90vw;
+    background-color: none;
+    margin: 3rem 1vw;
+  }
+
   .model {
     width: 90vw;
   }
@@ -953,6 +953,15 @@ input[type=range]::-webkit-slider-thumb {
   .nico-image-1 {
     background-image: url(../assets/img/nico50.jpg);
     height: 30.7rem;
+  }
+
+  .voorna {
+    margin-top: 10rem;
+  }
+
+  .anim {
+    margin-top: -60rem;
+    font-size: 8rem;
   }
 }
 
