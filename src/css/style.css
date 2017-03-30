@@ -493,10 +493,26 @@ h2 {
   width: 50rem;
 }
 
-.react-mount2 {
+/*.react-mount2 {
   width: 25rem;
   height: 25rem;
   background-color: var(--yellow);
+}*/
+
+.albumContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.playbutton {
+  position: absolute;
+  background: none;
+  border: none;
+  color: transparent;
+  background-image: url(../assets/img/play.png);
+  width: 4rem;
+  height: 4rem;
 }
 
 .voorna {
@@ -507,15 +523,24 @@ h2 {
 
 .voorna-image {
   width: 50vw;
-  height: 112.9rem;
+  height: 84.7rem;
   margin-top: 10rem;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .voor {
-  background-image: url(../assets/img/voor.jpg);
+  background-image: url(../assets/img/voor75.jpg);
   transition: 1s;
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+}
+
+.na {
+  background-image: url(../assets/img/na75.jpg);
 
   &:hover .overlay {
     opacity: 1;
@@ -544,14 +569,6 @@ h2 {
   opacity: 0;
   transition: .8s;
   letter-spacing: .2rem;
-}
-
-.na {
-  background-image: url(../assets/img/na.jpg);
-
-  &:hover .overlay {
-    opacity: 1;
-  }
 }
 
 .black {
@@ -862,6 +879,18 @@ input[type=range]::-webkit-slider-thumb {
     font-size: 3rem;
     border: 1px solid red;
   }
+
+  .voor {
+    background-image: url(../assets/img/voor50.jpg);
+  }
+
+  .na {
+    background-image: url(../assets/img/na50.jpg);
+  }
+
+  .voorna-image {
+    height: 56.5rem;
+  }
 }
 
 @media (width <= 800px) {
@@ -962,6 +991,18 @@ input[type=range]::-webkit-slider-thumb {
 
   .react-mount1 {
     background-position: center;
+  }
+
+  .voor {
+    background-image: url(../assets/img/voor25.jpg);
+  }
+
+  .na {
+    background-image: url(../assets/img/na25.jpg);
+  }
+
+  .voorna-image {
+    height: 28.2rem;
   }
 }
 

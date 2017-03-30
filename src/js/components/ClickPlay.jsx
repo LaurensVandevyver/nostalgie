@@ -21,8 +21,8 @@ const Song = ({
 
   return (
     <section>
-      <img src={image} onClick={handlePlay} />
-      <p>{url}</p>
+      <img className='album' src={image} onClick={handlePlay} />
+      {/* <p>{url}</p> */}
     </section>
   );
 
