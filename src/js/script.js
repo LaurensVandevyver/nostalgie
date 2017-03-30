@@ -4,9 +4,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import AppSlider from './containers/AppSlider';
 import AppPlaylist from './containers/AppPlaylist';
-//import ScrollReveal from 'ScrollReveal';
 
-//window.sr = ScrollReveal();
 const songs = [
   {
     image: `../assets/img/album1.jpg`,
@@ -26,13 +24,18 @@ const songs = [
   }
 ];
 
-// const revealText = () => {
-//   window.sr.reveal(`.intro`);
-//   window.sr.reveal(`.articlestyle`);
-//   window.sr.reveal(`.articlestyle2`);
-//   window.sr.reveal(`cite`);
-//   window.sr.reveal(`.albumContainer`);
-// };
+const revealText = () => {
+  const $containers = document.querySelectorAll(`.intro, .articlestyle, .articlestyle2, cite, .albumcontainer`);
+  const center = window.innerHeight * 0.9;
+
+  $containers.forEach($container => {
+    const top = $container.getBoundingClientRect().top;
+    const bottom = $container.getBoundingClientRect().bottom;
+    if (center > top && center < bottom) {
+      $container.style.visibility = `visible`;
+    }
+  });
+};
 
 const parallax = () => {
   const parallax1 = document.querySelectorAll(`.parallaxItem1`);
@@ -60,13 +63,15 @@ const parallax = () => {
 };
 
 const onScroll = () => {
-  //revealText();
   requestAnimationFrame(() => {
+    revealText();
+    if (innerWidth >= 1050) {
+      checkScrollVelvet();
+    }
     if (innerWidth >= 800) {
       parallax();
       checkContainer();
       focusElements();
-      checkScrollVelvet();
     }
   });
 };
@@ -74,8 +79,6 @@ const onScroll = () => {
 const checkScrollVelvet = () => {
   const $image = document.querySelector(`.drolletje`);
   const topImage = $image.getBoundingClientRect().top;
-
-  console.log(topImage);
 
   for (let i = 2;i < 7;i ++) {
     if (topImage <= i * (- 100) && topImage >= i * (- 100) - 100) {

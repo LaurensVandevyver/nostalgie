@@ -108,6 +108,8 @@ main {
   font-size: 1.7rem;
   line-height: 2.8rem;
   color: var(--grey);
+  visibility: hidden;
+  transition: .5s ease;
 
   &::first-letter {
     color: var(--blue);
@@ -133,6 +135,8 @@ strong {
 
 .intro {
   width: 75rem;
+  visibility: hidden;
+  transition: .5s ease;
 }
 
 .model {
@@ -170,6 +174,7 @@ strong {
   margin-top: 20rem;
   margin-bottom: 20rem;
   display: flex;
+  overflow: hidden;
 }
 
 .model-image1 {
@@ -257,7 +262,6 @@ strong {
   border-left: .5rem solid var(--pink);
   display: flex;
   margin-left: -10rem;
-  margin-top: -25rem;
   margin-bottom: 10rem;
 }
 
@@ -306,7 +310,7 @@ strong {
 .velvet-header {
   position: absolute;
   margin-left: 0;
-  background-image: url(../assets/img/velvetbanner.jpg);
+  background-image: url(../assets/img/velvetbanner100.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -418,7 +422,7 @@ h2 {
 
 .nico-image-2 {
   position: relative;
-  background-image: url(../assets/img/nico2_1.jpg);
+  background-image: url(../assets/img/nico2_100.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -469,6 +473,8 @@ h2 {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  visibility: hidden;
+  transition: .5s ease;
 }
 
 .playbutton {
@@ -564,6 +570,8 @@ h2 {
   line-height: 2.8rem;
   z-index: 9;
   color: var(--light_grey);
+  visibility: hidden;
+  transition: .5s ease;
 
   strong {
     color: white;
@@ -810,6 +818,17 @@ footer {
   .overgangcite {
     font-size: 4rem;
   }
+
+  .velvet-header {
+    background-image: url(../assets/img/velvetbanner75.jpg);
+    height: 51.3rem;
+    background-position: left;
+  }
+
+  .nico-image-2 {
+    background-image: url(../assets/img/nico2_75.jpg);
+    height: 57.6rem;
+  }
 }
 
 @media (width <= 960px) {
@@ -945,6 +964,14 @@ footer {
     margin-bottom: 0;
   }
 
+  .parallax5 {
+    display: none;
+  }
+
+  .parallax6 {
+    display: none;
+  }
+
 }
 
 @media (width <= 720px) {
@@ -952,6 +979,7 @@ footer {
   .undergroundsection {
     flex-direction: column;
     align-items: center;
+    margin-top: 3rem;
   }
 
   .tekstblok {
@@ -964,6 +992,10 @@ footer {
 }
 
 @media (width <= 630px) {
+
+  .minus {
+    margin-top: -25rem;
+  }
 
   .parallaxSection1 {
     width: 100vw;
@@ -1008,6 +1040,17 @@ footer {
   .anim {
     margin-top: -60rem;
     font-size: 8rem;
+  }
+
+  .velvet-header {
+    background-image: url(../assets/img/velvetbanner50.jpg);
+    height: 34.2rem;
+    background-position: left;
+  }
+
+  .nico-image-2 {
+    background-image: url(../assets/img/nico2_50.jpg);
+    height: 38.4rem;
   }
 }
 
@@ -1066,6 +1109,20 @@ footer {
   .nico-image-1 {
     background-image: url(../assets/img/nico25.jpg);
     height: 15.3rem;
+  }
+
+  .velvet-header {
+    background-image: url(../assets/img/velvetbanner25.jpg);
+    height: 17.1rem;
+  }
+
+  .minus {
+    margin-top: -45rem;
+  }
+
+  .nico-image-2 {
+    background-image: url(../assets/img/nico2_25.jpg);
+    height: 19.2rem;
   }
 }
 
