@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import Slider from '../components/Slider';
 
 class App extends Component {
@@ -12,44 +11,24 @@ class App extends Component {
   handleChangeYear = value => {
 
     this.setState({anim: false});
-
-    setTimeout(() => {
-      this.setState({anim: true});
-    });
+    setTimeout(() => {this.setState({anim: true});}, 10);
 
     this.setState({value: value});
-
   }
 
   render() {
-
     const {value, anim} = this.state;
-
-    // inline style via style object
-    const style = {
-      backgroundImage: `url(../assets/img/caroussel${value}.jpg)`
-    };
+    const style = {backgroundImage: `url(../assets/img/caroussel${value}.jpg)`};
 
     let classes;
     if (anim) classes = ` anim`;
 
     return (
-
-      <section className='gallery'>
-        <div className='react-mount1' style={style}>
-          <Slider className='slider' value={parseInt(value)} onChangeYear={this.handleChangeYear} classp={classes} />
-        </div>
+      <section className='gallery react-mount1' style={style}>
+        <Slider className='slider' value={parseInt(value)} onChangeYear={this.handleChangeYear} classp={classes} />
       </section>
-
-      // inline style adhv style=... instellen
-      // onChangeChannel wordt meegegeven als prop met als value de func die hierboven staat -> STATE SETTEN
-      // deze functie wordt dus elke keer uitgevoerd als handleChangeChannel in het slider component uitgevoerd wordt
-
     );
-
   }
-
 }
 
-// elke keer bij elk component exporten
 export default App;

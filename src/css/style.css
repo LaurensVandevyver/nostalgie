@@ -2,9 +2,9 @@
 
 :root {
   --blue: #292eba;
-  --pink: #e64f60;
+  --pink: #f83e5c;
   --yellow: #ffa624;
-  --grey: #323232;
+  --grey: #070707;
   --light_grey: #cbcbcb;
 }
 
@@ -212,15 +212,14 @@ strong {
   visibility: hidden;
   margin-top: 10rem;
   height: 56rem;
-  animation: fadeout .5s;
+  animation: fadeout .2s;
 }
 
 .img-container {
   visibility: hidden;
   position: fixed;
   top: 0;
-  right: 0;
-  right: 1rem;
+  right: 12vw;
   width: 37rem;
   height: 60rem;
   margin-top: 10rem;
@@ -233,7 +232,7 @@ strong {
 
 .content-img1 {
   opacity: 0;
-  transition: .3s;
+  transition: .2s;
   position: absolute;
 }
 
@@ -241,13 +240,13 @@ strong {
   opacity: 0;
   width: 24.1rem;
   height: 56rem;
-  transition: .3s;
+  transition: .2s;
   position: absolute;
 }
 
 .content-img3 {
   opacity: 0;
-  transition: .3s;
+  transition: .2s;
   position: absolute;
 }
 
@@ -269,15 +268,15 @@ strong {
   position: relative;
   width: 100vw;
   height: 80vh;
-  background-color: var(--pink);
+  background-color: var(--light_grey);
 }
 
 .diamanten {
   position: absolute;
   right: 0;
-  top: -15rem;
+  top: -42rem;
   width: 40rem;
-  height: 40rem;
+  height: 67rem;
 }
 
 .diamant1 {
@@ -383,7 +382,7 @@ h2 {
   margin: 0 0 5rem;
 }
 
-.parallaxSection1 {
+.parallaxSection1, .parallaxSection5 {
   position: relative;
   margin-top: 5rem;
   height: 80vh;
@@ -394,7 +393,11 @@ h2 {
   justify-content: space-around;
 }
 
-.parallaxItem1 {
+.parallaxSection5 {
+  margin-top: 0;
+}
+
+.parallaxItem1, .parallaxItem5 {
   position: absolute;
   top: 0;
   background-position: top center;
@@ -420,7 +423,23 @@ h2 {
   background-image: url(../assets/img/nico1_4.png);
 }
 
-.nico-image-2 {
+.parallax7 {
+  background-image: url(../assets/img/nicodark_1.jpg);
+}
+
+.parallax8 {
+  background-image: url(../assets/img/nicodark_2.png);
+}
+
+.parallax9 {
+  background-image: url(../assets/img/nicodark_3.png);
+}
+
+.parallax10 {
+  background-image: url(../assets/img/nicodark_4.png);
+}
+
+.parallaxItem6 {
   position: relative;
   background-image: url(../assets/img/nico2_100.jpg);
   background-attachment: fixed;
@@ -485,6 +504,20 @@ h2 {
   background-image: url(../assets/img/play.png);
   width: 4rem;
   height: 4rem;
+  right: -2rem;
+  bottom: -2rem;
+}
+
+.pausebutton {
+  position: absolute;
+  background: none;
+  border: none;
+  color: transparent;
+  background-image: url(../assets/img/pause.png);
+  width: 4rem;
+  height: 4rem;
+  right: -2rem;
+  bottom: -2rem;
 }
 
 .voorna {
@@ -495,7 +528,7 @@ h2 {
 
 .voorna-image {
   width: 50vw;
-  height: 84.7rem;
+  height: 100rem;
   margin-top: 10rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -526,7 +559,7 @@ h2 {
 
 .jaar2 {
   color: white;
-  background-color: rgba(13, 13, 13, .8);
+  background-color: rgba(7, 7, 7, .8);
 }
 
 .overlay {
@@ -545,7 +578,7 @@ h2 {
 
 .black {
   position: relative;
-  background-color: #0d0d0d;
+  background-color: var(--grey);
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -553,16 +586,16 @@ h2 {
   color: #cdcdcd;
 }
 
-.darkBackground {
+.parallaxItem4 {
   position: absolute;
   right: 0;
-  bottom: 0;
   width: 100rem;
-  height: 100rem;
+  height: 110rem;
   background-image: url(../assets/img/darkbackground.png);
   background-repeat: no-repeat;
   background-position: bottom right;
   z-index: 0;
+  bottom: 0;
 }
 
 .articlestyle2 {
@@ -825,7 +858,7 @@ footer {
     background-position: left;
   }
 
-  .nico-image-2 {
+  .parallaxItem6 {
     background-image: url(../assets/img/nico2_75.jpg);
     height: 57.6rem;
   }
@@ -1009,7 +1042,14 @@ footer {
     height: 53rem;
   }
 
-  .parallax2, .parallax3, .parallax4 {
+  .parallax7 {
+    background-image: url(../assets/img/nicodark.jpg);
+    background-size: contain;
+    width: 63rem;
+    height: 53rem;
+  }
+
+  .parallax2, .parallax3, .parallax4, .parallax8, .parallax9, .parallax10 {
     background-image: none;
   }
 
@@ -1048,7 +1088,7 @@ footer {
     background-position: left;
   }
 
-  .nico-image-2 {
+  .parallaxItem6 {
     background-image: url(../assets/img/nico2_50.jpg);
     height: 38.4rem;
   }
@@ -1120,7 +1160,7 @@ footer {
     margin-top: -45rem;
   }
 
-  .nico-image-2 {
+  .parallaxItem6 {
     background-image: url(../assets/img/nico2_25.jpg);
     height: 19.2rem;
   }
