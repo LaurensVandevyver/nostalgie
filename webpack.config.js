@@ -14,8 +14,8 @@ const {ifProduction, ifDevelopment} = getIfUtils(process.env.NODE_ENV);
 const extractCSS = new ExtractTextWebpackPlugin(`css/style.css`);
 
 // change for production build on different server path
-//const publicPath = `/`;
-const publicPath = `/laurens.vandevyver/20162017/ma4/tribute/`;
+const publicPath = `/`;
+//const publicPath = `/laurens.vandevyver/20162017/ma4/tribute/`;
 
 const port = 3000;
 

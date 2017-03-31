@@ -9,20 +9,20 @@ import AppPlaylist from './containers/AppPlaylist';
 // window.sr = ScrollReveal();
 const songs = [
   {
-    image: `./assets/img/album1.jpg`,
-    url: `./assets/audio/one.mp3`
+    image: `../assets/img/album1.jpg`,
+    url: `../assets/audio/one.mp3`
   },
   {
-    image: `./assets/img/album2.jpg`,
-    url: `./assets/audio/two.mp3`
+    image: `../assets/img/album2.jpg`,
+    url: `../assets/audio/two.mp3`
   },
   {
-    image: `./assets/img/album3.jpg`,
-    url: `./assets/audio/three.mp3`
+    image: `../assets/img/album3.jpg`,
+    url: `../assets/audio/three.mp3`
   },
   {
-    image: `./assets/img/album4.jpg`,
-    url: `./assets/audio/four.mp3`
+    image: `../assets/img/album4.jpg`,
+    url: `../assets/audio/four.mp3`
   }
 ];
 
@@ -107,7 +107,7 @@ const checkScrollVelvet = () => {
 
   for (let i = 2;i < 7;i ++) {
     if (topImage <= i * (- 100) && topImage >= i * (- 100) - 100) {
-      $image.style.backgroundImage = `url(./assets/img/nico2_${i}.png)`;
+      $image.style.backgroundImage = `url(../assets/img/nico2_${i}.png)`;
     } else if (topImage >= 0 || topImage <= - 600) {
       $image.style.backgroundImage = `none`;
     }
