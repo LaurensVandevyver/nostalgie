@@ -4,9 +4,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import AppSlider from './containers/AppSlider';
 import AppPlaylist from './containers/AppPlaylist';
-// import ScrollReveal from 'ScrollReveal';
 
-// window.sr = ScrollReveal();
 const songs = [
   {
     image: `../assets/img/album1.jpg`,
@@ -26,19 +24,6 @@ const songs = [
   }
 ];
 
-const revealText = () => {
-  const $containers = document.querySelectorAll(`.intro, .articlestyle, .articlestyle2`);
-  const center = window.innerHeight * 0.9;
-
-  $containers.forEach($container => {
-    const top = $container.getBoundingClientRect().top;
-    const bottom = $container.getBoundingClientRect().bottom;
-    if (center > top && center < bottom) {
-      $container.style.visibility = `visible`;
-    }
-  });
-};
-
 const parallax = () => {
   const parallax = [];
   for (let i = 1;i < 7;i ++) {
@@ -52,41 +37,18 @@ const parallax = () => {
     document.querySelector(`.parallaxSection5`).getBoundingClientRect().top,
     document.querySelector(`.parallaxItem6`).getBoundingClientRect().top
   ];
+  const speedP = [- 0.09, - 0.15, 0.05, 0.15, - 0.09, 0.05];
 
-  parallax[0].forEach((el, i) => {
-    const speed = - 0.09 * (i + 1);
-    const elBackgrounPos = `0%${windowYOffset[0] * speed}px`;
-    el.style.backgroundPosition = elBackgrounPos;
-  });
-  parallax[1].forEach((el, i) => {
-    const speed = - 0.15 * (i + 1);
-    const elBackgrounPos = `0%${windowYOffset[1] * speed}px`;
-    el.style.backgroundPosition = elBackgrounPos;
-  });
-  parallax[2].forEach((el, i) => {
-    const speed = + 0.05 * (i + 1);
-    const elBackgrounPos = `0%${windowYOffset[2] * speed}px`;
-    el.style.backgroundPosition = elBackgrounPos;
-  });
-  parallax[3].forEach(el => {
-    const speed = 0.15;
-    const elBackgrounPos = `0%${windowYOffset[3] * speed}px`;
-    el.style.backgroundPosition = elBackgrounPos;
-  });
-  parallax[4].forEach((el, i) => {
-    const speed = - 0.09 * (i + 1);
-    const elBackgrounPos = `0%${windowYOffset[4] * speed}px`;
-    el.style.backgroundPosition = elBackgrounPos;
-  });
-  parallax[5].forEach(el => {
-    const speed = 0.05;
-    const elBackgrounPos = `0%${windowYOffset[5] * speed}px`;
-    el.style.backgroundPosition = elBackgrounPos;
-  });
+  for (let p = 0;p < parallax.length;p ++) {
+    parallax[p].forEach((el, i) => {
+      const speed = speedP[p] * (i + 1);
+      const elBackgrounPos = `0%${windowYOffset[p] * speed}px`;
+      el.style.backgroundPosition = elBackgrounPos;
+    });
+  }
 };
 
 const onScroll = () => {
-  revealText();
   requestAnimationFrame(() => {
     if (innerWidth >= 800) {
       parallax();

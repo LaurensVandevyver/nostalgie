@@ -4,7 +4,7 @@
   --blue: #292eba;
   --pink: #f83e5c;
   --yellow: #ffa624;
-  --grey: #070707;
+  --grey: #010101;
   --light_grey: #cbcbcb;
 }
 
@@ -16,21 +16,62 @@ body {
 }
 
 header {
+  position: relative;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+}
+
+.headercontent {
+  position: absolute;
+  bottom: 0;
+  right: 10rem;
+  z-index: 5;
+  width: 38rem;
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: .5s;
+  animation-delay: 1s;
+
+  & h1 {
+    right: 0;
+    font-family: times;
+    color: var(--yellow);
+    font-size: 20rem;
+    font-weight: bold;
+    margin-bottom: 10rem;
+  }
+
+  & p {
+    width: 38rem;
+    background-color: white;
+    padding: 2.5rem;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    bottom: 0;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 10rem;
+  }
 }
 
 video {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 1;
+  z-index: 0;
   min-width: 100vw;
   min-height: 100vh;
-  /*width: auto;
-  height: auto;*/
   transform: translate(-50%, -50%);
 }
 
@@ -120,8 +161,6 @@ main {
   font-size: 1.7rem;
   line-height: 2.8rem;
   color: var(--grey);
-  transition: .5s ease;
-  visibility: hidden;
 
   &::first-letter {
     color: var(--blue);
@@ -147,13 +186,13 @@ strong {
 
 .intro {
   width: 75rem;
-  transition: .5s ease;
-  visibility: hidden;
+  margin-top: 23rem;
+  margin-bottom: 23rem;
 }
 
 .model {
   width: 40rem;
-  margin-top: 10rem;
+  margin-top: 5rem;
 
   &:first-of-type {
     margin-top: 5rem;
@@ -166,14 +205,14 @@ strong {
 }
 
 .model2 {
-  width: 60rem;
+  width: 65rem;
 
   &:first-of-type {
-    margin-top: 25rem;
+    margin-top: 23rem;
   }
 
   &:last-of-type {
-    margin-bottom: 25rem;
+    margin-bottom: 23rem;
   }
 }
 
@@ -183,8 +222,8 @@ strong {
 
 .modelsection {
   right: -20rem;
-  margin-top: 20rem;
-  margin-bottom: 20rem;
+  margin-top: 23rem;
+  margin-bottom: 23rem;
   display: flex;
   overflow: hidden;
 }
@@ -272,7 +311,8 @@ strong {
   border-left: .5rem solid var(--pink);
   display: flex;
   margin-left: -10rem;
-  margin-bottom: 10rem;
+  margin-bottom: 15rem;
+  margin-top: -17rem;
 }
 
 .gallery {
@@ -378,11 +418,11 @@ strong {
 }
 
 .undergroundContent {
-  margin-bottom: 20rem;
+  margin-bottom: 23rem;
 }
 
 .soloContent {
-  margin-top: 15rem;
+  margin-top: 23rem;
 }
 
 h2 {
@@ -395,7 +435,6 @@ h2 {
 
 .parallaxSection1, .parallaxSection5 {
   position: relative;
-  margin-top: 5rem;
   height: 80vh;
   width: 100vw;
   overflow: hidden;
@@ -465,7 +504,6 @@ h2 {
 .drolletje {
   position: absolute;
   background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 108rem;
@@ -484,14 +522,14 @@ h2 {
   padding-left: 1rem;
   border-left: .5rem solid var(--pink);
   display: flex;
-  margin-top: 10rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 .undergroundsection {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  margin-top: 10rem;
 }
 
 .undergroundstyle {
@@ -593,6 +631,8 @@ h2 {
   flex-direction: column;
   align-items: center;
   color: #cdcdcd;
+  padding-bottom: 23rem;
+  padding-top: 10rem;
 }
 
 .parallaxItem4 {
@@ -612,8 +652,6 @@ h2 {
   line-height: 2.8rem;
   z-index: 9;
   color: var(--light_grey);
-  transition: .5s ease;
-  visibility: hidden;
 
   strong {
     color: white;
@@ -651,10 +689,12 @@ h2 {
   width: 96rem;
   display: flex;
   justify-content: space-between;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .solocite {
-  width: 60rem;
+  width: 70rem;
   color: white;
   font-size: 3rem;
   line-height: 140%;
@@ -667,21 +707,25 @@ h2 {
 }
 
 .endcite {
+  position: relative;
   font-size: 3rem;
   line-height: 140%;
   font-family: times;
   font-weight: bold;
   font-style: italic;
   display: flex;
-  padding: 5rem;
+  margin-top: 5rem;
+  margin-bottom: -5rem;
   color: white;
 }
 
 .ari {
   position: absolute;
   align-self: flex-end;
-  margin-left: 52rem;
+  right: 6rem;
   font-weight: normal;
+  font-size: 2rem;
+  margin-top: -5rem;
 }
 
 .quote {
@@ -830,6 +874,8 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .logo {
@@ -845,10 +891,19 @@ footer {
   text-align: center;
 }
 
+.darkend {
+  margin-top: 15rem;
+}
+
 @media (width <= 1050px) {
+
+  .img-container {
+    right: 0;
+  }
 
   header {
     height: 83vh;
+    overflow: hidden;
   }
 
   .model {
@@ -889,6 +944,24 @@ footer {
     transform: translate(-50%, 0);
   }
 
+  .articlestyle:first-of-type {
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+  }
+
+  .modelsection {
+    margin-top: 0;
+  }
+
+  .model2:last-of-type {
+    margin-bottom: 15rem;
+  }
+
+  .velvettitle {
+    margin-top: 10rem;
+    margin-bottom: -10rem;
+  }
+
   .content {
     width: 90vw;
   }
@@ -898,7 +971,7 @@ footer {
   }
 
   .margin {
-    margin: 10rem 0;
+    margin: 5rem 0;
   }
 
   .model {
@@ -920,6 +993,15 @@ footer {
 
   .undergroundcite {
     width: 90vw;
+    margin: 0;
+  }
+
+  .undergroundContent {
+    margin-bottom: 0;
+  }
+
+  .react-mount2 {
+    margin-top: 10rem;
   }
 
   .tekstblok {
@@ -938,8 +1020,16 @@ footer {
     width: 90vw;
   }
 
+  .soloContent {
+    margin-top: 5rem;
+  }
+
+  .albums {
+    margin-top: 10rem;
+  }
+
   .solocite {
-    width: 45vw;
+    width: 65vw;
   }
 
   .left {
@@ -976,6 +1066,16 @@ footer {
 
   header {
     height: 50vh;
+    position: relative;
+  }
+
+  .headercontent {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
   }
 
   video {
@@ -983,17 +1083,19 @@ footer {
   }
 
   .mobileheader {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
     width: 100vw;
     height: 50vh;
-    background-color: gray;
+    background-image: url(../assets/video/header.gif);
   }
 
   .parallaxSection1 {
     height: 53.1rem;
     background-image: url(../assets/img/nico1.jpg);
     background-size: cover;
-    background-attachment: fixed;
     background-repeat: no-repeat;
   }
 
@@ -1003,7 +1105,6 @@ footer {
     background-position: right top;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
   }
 
   .diamanten {
@@ -1022,6 +1123,10 @@ footer {
     font-size: 3rem;
   }
 
+  .modelteksten .articlestyle:first-of-type {
+    margin-bottom: 30rem;
+  }
+
   .img-container {
     display: hidden;
     height: 0;
@@ -1031,9 +1136,23 @@ footer {
     width: 90vw;
   }
 
+  .model2:first-of-type {
+    margin-bottom: 0;
+  }
+
   .modelcite {
     width: 80vw;
     margin-left: 10vw;
+    margin-top: -83rem;
+    margin-bottom: 70rem;
+  }
+
+  .underground .articlestyle:first-of-type {
+    margin-bottom: 5rem;
+  }
+
+  .undergroundsection .articlestyle:first-of-type {
+    margin-top: 5rem;
   }
 
   .model-image1, .model-image2, .model-image3 {
@@ -1055,6 +1174,18 @@ footer {
 
   .parallax6 {
     display: none;
+  }
+
+  .parallaxItem6 {
+    background-attachment: scroll;
+  }
+
+  .undergroundsection .undergroundstyle {
+    margin-bottom: 0;
+  }
+
+  .black:last-of-type {
+    padding-top: 0;
   }
 
 }
@@ -1124,7 +1255,7 @@ footer {
   }
 
   .anim {
-    margin-top: -60rem;
+    margin-top: -53rem;
     font-size: 8rem;
   }
 
@@ -1203,9 +1334,25 @@ footer {
     background-image: url(../assets/img/nico1_50.jpg);
     background-attachment: local;
   }
+
+  .anim {
+    margin-top: -40rem;
+  }
 }
 
 @media (width <= 350px) {
+
+  .anim {
+    margin-top: -50rem;
+  }
+
+  .model-image1 {
+    margin-top: 17rem;
+  }
+
+  .modelcite {
+    margin-top: -100rem;
+  }
 
   .nico-image-1 {
     background-image: url(../assets/img/nico25.jpg);
@@ -1222,15 +1369,9 @@ footer {
   }
 
   .parallaxItem6 {
-    background-image: url(../assets/img/nico2_25.jpg);
-    height: 19.2rem;
+    background-image: url(../assets/img/nico2_50.jpg);
+    height: 40rem;
   }
-
-  /*.parallaxSection5 {
-    height: 25.2rem;
-    background-image: url(../assets/img/nicodark50.jpg);
-    background-attachment: local;
-  }*/
 }
 
 .react-mount {
