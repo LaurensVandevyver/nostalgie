@@ -1,15 +1,1426 @@
 @import 'reset';
 
+:root {
+  --blue: #292eba;
+  --pink: #f83e5c;
+  --yellow: #ffa624;
+  --grey: #010101;
+  --light_grey: #cbcbcb;
+}
+
 body {
-  font-family: Roboto;
-  font-size: 1.6rem;
-  margin: 2rem;
+  font-family: helvetica;
+  font-size: 2rem;
+  line-height: 150%;
+  color: #333;
 }
 
 header {
-  margin: 2rem 0;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
-h1 {
+.headercontent {
+  position: absolute;
+  bottom: 0;
+  right: 10rem;
+  z-index: 5;
+  width: 38rem;
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: .5s;
+  animation-delay: 1s;
+
+  & h1 {
+    right: 0;
+    font-family: times;
+    color: var(--yellow);
+    font-size: 20rem;
+    font-weight: bold;
+    margin-bottom: 10rem;
+  }
+
+  & p {
+    width: 38rem;
+    background-color: white;
+    padding: 2.5rem;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    bottom: 0;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 10rem;
+  }
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  transform: translate(-50%, -50%);
+}
+
+.headerintro {
+  width: 36rem;
+  background-color: white;
+  padding: 1.5rem;
+  margin-left: -10rem;
+  z-index: 99;
+
+  &::first-letter {
+    color: var(--blue);
+    float: left;
+    font-family: times;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 3rem;
+    padding-top: 2rem;
+    padding-right: .7rem;
+  }
+}
+
+.overgangcite {
+  font-size: 5rem;
+  font-weight: bold;
+  font-style: italic;
+  font-family: times;
+  line-height: 110%;
+  background-color: white;
+  position: absolute;
+  top: 20rem;
+  margin-left: 35%;
+  z-index: 9;
+  padding: 1.2rem;
+}
+
+.header-wrapper {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+}
+
+.nico-headerimage {
+  background-image: url(../assets/img/header-image2.png);
+  width: 77.6rem;
+  height: 69.6rem;
+  margin-left: 10%;
+  z-index: 1;
+
+  animation-name: nico;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+  &::before {
+    content: '';
+    width: 50rem;
+    height: 7.5rem;
+    background-color: var(--blue);
+    margin-left: -1rem;
+    margin-top: 65rem;
+    position: absolute;
+    transform: rotate(3deg);
+    mix-blend-mode: darken;
+  }
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 96rem;
+  z-index: 3;
+}
+
+.margin {
+  margin: 10rem;
+}
+
+.articlestyle {
+  z-index: 9;
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+  color: var(--grey);
+
+  &::first-letter {
+    color: var(--blue);
+    float: left;
+    font-family: times;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 3rem;
+    padding-top: 2rem;
+    padding-right: .7rem;
+  }
+}
+
+strong {
+  font-weight: bold;
+  color: black;
+}
+
+.strong2 {
+  font-weight: bold;
+  color: white;
+}
+
+.intro {
+  width: 75rem;
+  margin-top: 23rem;
+  margin-bottom: 23rem;
+}
+
+.model {
+  width: 40rem;
+  margin-top: 5rem;
+
+  &:first-of-type {
+    margin-top: 5rem;
+    padding-bottom: 10rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 5rem;
+  }
+}
+
+.model2 {
+  width: 65rem;
+
+  &:first-of-type {
+    margin-top: 23rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 23rem;
+  }
+}
+
+.left {
+  margin-left: 20rem;
+}
+
+.modelsection {
+  right: -20rem;
+  margin-top: 23rem;
+  margin-bottom: 23rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.model-image1 {
+  background-image: url(../assets/img/one.png);
+  width: 35.8rem;
+  height: 46rem;
+  align-self: center;
+  display: none;
+}
+
+.model-image2 {
+  background-image: url(../assets/img/two.png);
+  width: 24.1rem;
+  height: 56rem;
+  align-self: center;
+  display: none;
+}
+
+.model-image3 {
+  background-image: url(../assets/img/three.png);
+  width: 35.4rem;
+  height: 55.8rem;
+  margin-bottom: 5rem;
+  align-self: center;
+  display: none;
+}
+
+.modelteksten {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-img {
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 10rem;
+  height: 56rem;
+  animation: fadeout .2s;
+}
+
+.img-container {
+  position: fixed;
+  top: 0;
+  right: 12vw;
+  width: 37rem;
+  height: 60rem;
+  margin-top: 10rem;
+  overflow: hidden;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.content-img1 {
+  opacity: 0;
+  transition: .2s;
+  position: absolute;
+}
+
+.content-img2 {
+  opacity: 0;
+  width: 24.1rem;
+  height: 56rem;
+  transition: .2s;
+  position: absolute;
+}
+
+.content-img3 {
+  opacity: 0;
+  transition: .2s;
+  position: absolute;
+}
+
+.modelcite {
+  width: 65rem;
   font-size: 3rem;
+  line-height: 140%;
+  font-family: times;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 1rem;
+  border-left: .5rem solid var(--pink);
+  display: flex;
+  margin-left: -10rem;
+  margin-bottom: 15rem;
+  margin-top: -17rem;
+}
+
+.gallery {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  background-color: var(--light_grey);
+}
+
+.diamanten {
+  position: absolute;
+  right: 0;
+  top: -42rem;
+  width: 40rem;
+  height: 67rem;
+}
+
+.diamant1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/diamant1.png);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.diamant2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/diamant2.png);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.diamant3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/diamant3.png);
+  background-repeat: no-repeat;
+  z-index: -5;
+}
+
+.velvet-header {
+  position: absolute;
+  margin-left: 0;
+  background-image: url(../assets/img/velvetbanner100.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 68.4rem;
+  z-index: -1;
+
+  &::after {
+    content: '';
+    background: linear-gradient(rgba(255, 255, 255, 0) 20%, white);
+    width: 100vw;
+    height: 68.4rem;
+    position: absolute;
+    z-index: 0;
+  }
+}
+
+.parallaxSection2 {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 68.4rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.parallaxItem2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 68.4rem;
+  z-index: 20;
+}
+
+.parallax5 {
+  background-image: url(../assets/img/velvetbanner_1.png);
+}
+
+.parallax6 {
+  background-image: url(../assets/img/velvetbanner_2.png);
+}
+
+.minus {
+  margin-top: -10rem;
+}
+
+.underground {
+  width: 75rem;
+  margin-left: 10rem;
+}
+
+.undergroundContent {
+  margin-bottom: 23rem;
+}
+
+.soloContent {
+  margin-top: 23rem;
+}
+
+h2 {
+  color: var(--pink);
+  font-family: times;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0 0 5rem;
+}
+
+.parallaxSection1, .parallaxSection5 {
+  position: relative;
+  height: 80vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.parallaxSection5 {
+  margin-top: 0;
+}
+
+.parallaxItem1, .parallaxItem5 {
+  position: absolute;
+  top: 0;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100rem;
+  width: 170rem;
+}
+
+.parallax1 {
+  background-image: url(../assets/img/nico1_1.jpg);
+}
+
+.parallax2 {
+  background-image: url(../assets/img/nico1_2.png);
+}
+
+.parallax3 {
+  background-image: url(../assets/img/nico1_3.png);
+}
+
+.parallax4 {
+  background-image: url(../assets/img/nico1_4.png);
+}
+
+.parallax7 {
+  background-image: url(../assets/img/nicodark_1.jpg);
+}
+
+.parallax8 {
+  background-image: url(../assets/img/nicodark_2.png);
+}
+
+.parallax9 {
+  background-image: url(../assets/img/nicodark_3.png);
+}
+
+.parallax10 {
+  background-image: url(../assets/img/nicodark_4.png);
+}
+
+.parallaxItem6 {
+  position: relative;
+  background-image: url(../assets/img/nico2_100.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 108rem;
+  width: 100vw;
+  left: 0;
+}
+
+.drolletje {
+  position: absolute;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 108rem;
+  width: 100vw;
+  left: 0;
+  top: 0;
+}
+
+.undergroundcite {
+  width: 70rem;
+  font-size: 3rem;
+  line-height: 140%;
+  font-family: times;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 1rem;
+  border-left: .5rem solid var(--pink);
+  display: flex;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.undergroundsection {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.undergroundstyle {
+  width: 50rem;
+}
+
+.albumContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: .5s ease;
+}
+
+.playbutton {
+  position: absolute;
+  background: none;
+  border: none;
+  color: transparent;
+  background-image: url(../assets/img/play.png);
+  width: 4rem;
+  height: 4rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.pausebutton {
+  position: absolute;
+  background: none;
+  border: none;
+  color: transparent;
+  background-image: url(../assets/img/pause.png);
+  width: 4rem;
+  height: 4rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.voorna {
+  position: relative;
+  width: 100vw;
+  display: flex;
+}
+
+.voorna-image {
+  width: 50vw;
+  height: 100rem;
+  margin-top: 10rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.voor {
+  background-image: url(../assets/img/voor75.jpg);
+  transition: 1s;
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+}
+
+.na {
+  background-image: url(../assets/img/na75.jpg);
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+}
+
+.jaar {
+  color: black;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.jaar2 {
+  color: white;
+  background-color: rgba(7, 7, 7, .8);
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: times;
+  font-size: 7rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: .8s;
+  letter-spacing: .2rem;
+}
+
+.black {
+  position: relative;
+  background-color: var(--grey);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #cdcdcd;
+  padding-bottom: 23rem;
+  padding-top: 10rem;
+}
+
+.parallaxItem4 {
+  position: absolute;
+  right: 0;
+  width: 100rem;
+  height: 110rem;
+  background-image: url(../assets/img/darkbackground.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  z-index: 0;
+  bottom: 0;
+}
+
+.articlestyle2 {
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+  z-index: 9;
+  color: var(--light_grey);
+
+  strong {
+    color: white;
+    font-weight: bold;
+  }
+
+  &::first-letter {
+    color: white;
+    float: left;
+    font-family: times;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 3rem;
+    padding-top: 2rem;
+    padding-right: .7rem;
+  }
+}
+
+.darksize {
+  width: 85rem;
+}
+
+.darksize2 {
+  width: 40rem;
+}
+
+.darkimage {
+  background-image: url(../assets/img/darkimage.jpg);
+  width: 52.8rem;
+  height: 42.2rem;
+  filter: grayscale(100%);
+}
+
+.solocontainer {
+  width: 96rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.solocite {
+  width: 70rem;
+  color: white;
+  font-size: 3rem;
+  line-height: 140%;
+  font-family: times;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 1rem;
+  border-left: .5rem solid white;
+  z-index: 5;
+}
+
+.endcite {
+  position: relative;
+  font-size: 3rem;
+  line-height: 140%;
+  font-family: times;
+  font-weight: bold;
+  font-style: italic;
+  display: flex;
+  margin-top: 5rem;
+  margin-bottom: -5rem;
+  color: white;
+}
+
+.ari {
+  position: absolute;
+  align-self: flex-end;
+  right: 6rem;
+  font-weight: normal;
+  font-size: 2rem;
+  margin-top: -5rem;
+}
+
+.quote {
+  color: var(--yellow);
+  font-style: italic;
+}
+
+.pink {
+  color: var(--pink);
+}
+
+.tekstblok {
+  width: 65rem;
+}
+
+.react-mount1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: cover;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.italic {
+  font-style: italic;
+  color: white;
+}
+
+input[type=range] {
+  appearance: none;
+  width: 90vw;
+  background: transparent;
+
+  &::-slider-thumb {
+    appearance: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &track {
+    width: 90vw;
+    height: 1rem;
+    cursor: pointer;
+    background: transparent;
+    background-color: transparent;
+    color: transparent;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 90vw;
+    height: 1.6rem;
+    cursor: pointer;
+    background: white;
+    border-radius: 1.6rem;
+  }
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  height: 1.6rem;
+  width: 5rem;
+  border-radius: 1.6rem;
+  background: var(--blue);
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.modeltitel {
+  position: absolute;
+  left: 20vw;
+  margin-top: -2rem;
+  z-index: 9999;
+  font-size: 4rem;
+  background-color: white;
+  padding: .5rem;
+  font-family: times;
+  font-style: italic;
+  color: black;
+}
+
+.focus {
+  opacity: 1;
+  transition: opacity .8s;
+  visibility: visible;
+}
+
+.anim {
+  font-family: times;
+  color: var(--yellow);
+  font-size: 20rem;
+  position: absolute;
+  font-weight: bold;
+  margin-top: -50rem;
+  padding: 1rem;
+  animation-name: year;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes year {
+
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(20%, 0);
+  }
+}
+
+footer {
+  background-color: var(--yellow);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nostalgie {
+  width: 90vw;
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.logo {
+  background-image: url(../assets/img/logo.png);
+  width: 20rem;
+  height: 9rem;
+}
+
+.description {
+  width: 35vw;
+  margin-top: 5rem;
+  color: white;
+  text-align: center;
+}
+
+.darkend {
+  margin-top: 15rem;
+}
+
+@media (width <= 1050px) {
+
+  .img-container {
+    right: 0;
+  }
+
+  header {
+    height: 83vh;
+    overflow: hidden;
+  }
+
+  .model {
+    width: 40vw;
+  }
+
+  .overgangcite {
+    font-size: 4rem;
+  }
+
+  .velvet-header {
+    background-image: url(../assets/img/velvetbanner75.jpg);
+    height: 51.3rem;
+    background-position: left;
+  }
+
+  .parallaxItem6 {
+    background-image: url(../assets/img/nico2_75.jpg);
+    height: 57.6rem;
+  }
+
+  video {
+    top: 0;
+    min-height: 90vh;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (width <= 960px) {
+
+  header {
+    height: 70vh;
+  }
+
+  video {
+    top: 0;
+    min-height: 70vh;
+    transform: translate(-50%, 0);
+  }
+
+  .articlestyle:first-of-type {
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+  }
+
+  .modelsection {
+    margin-top: 0;
+  }
+
+  .model2:last-of-type {
+    margin-bottom: 15rem;
+  }
+
+  .velvettitle {
+    margin-top: 10rem;
+    margin-bottom: -10rem;
+  }
+
+  .content {
+    width: 90vw;
+  }
+
+  .intro {
+    width: 100%;
+  }
+
+  .margin {
+    margin: 5rem 0;
+  }
+
+  .model {
+    width: 35vw;
+  }
+
+  .modelcite {
+    margin-left: 1rem;
+    width: 40vw;
+  }
+
+  .model2 {
+    width: 70vw;
+  }
+
+  .underground {
+    width: 75vw;
+  }
+
+  .undergroundcite {
+    width: 90vw;
+    margin: 0;
+  }
+
+  .undergroundContent {
+    margin-bottom: 0;
+  }
+
+  .react-mount2 {
+    margin-top: 10rem;
+  }
+
+  .tekstblok {
+    width: 50vw;
+  }
+
+  .undergroundstyle {
+    width: 50vw;
+  }
+
+  .articlestyle2 {
+    width: 90vw;
+  }
+
+  .solocontainer {
+    width: 90vw;
+  }
+
+  .soloContent {
+    margin-top: 5rem;
+  }
+
+  .albums {
+    margin-top: 10rem;
+  }
+
+  .solocite {
+    width: 65vw;
+  }
+
+  .left {
+    margin-left: 10rem;
+  }
+
+  .nico-image-1 {
+    background-image: url(../assets/img/nico75.jpg);
+    height: 46rem;
+  }
+
+  .anim {
+    font-size: 12rem;
+  }
+
+  .voor {
+    background-image: url(../assets/img/voor50.jpg);
+  }
+
+  .na {
+    background-image: url(../assets/img/na50.jpg);
+  }
+
+  .voorna-image {
+    height: 56.5rem;
+  }
+
+  .description {
+    width: 90vw;
+  }
+}
+
+@media (width <= 800px) {
+
+  header {
+    height: 50vh;
+    position: relative;
+  }
+
+  .headercontent {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  video {
+    display: none;
+  }
+
+  .mobileheader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 50vh;
+    background-image: url(../assets/video/header.gif);
+  }
+
+  .parallaxSection1 {
+    height: 53.1rem;
+    background-image: url(../assets/img/nico1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .parallaxSection5 {
+    height: 50.4rem;
+    background-image: url(../assets/img/nicodark.jpg);
+    background-position: right top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .diamanten {
+    display: none;
+  }
+
+  .parallaxItem1 {
+    display: none;
+  }
+
+  .parallaxItem5 {
+    display: none;
+  }
+
+  .overgangcite {
+    font-size: 3rem;
+  }
+
+  .modelteksten .articlestyle:first-of-type {
+    margin-bottom: 30rem;
+  }
+
+  .img-container {
+    display: hidden;
+    height: 0;
+  }
+
+  .model {
+    width: 90vw;
+  }
+
+  .model2:first-of-type {
+    margin-bottom: 0;
+  }
+
+  .modelcite {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: -83rem;
+    margin-bottom: 70rem;
+  }
+
+  .underground .articlestyle:first-of-type {
+    margin-bottom: 5rem;
+  }
+
+  .undergroundsection .articlestyle:first-of-type {
+    margin-top: 5rem;
+  }
+
+  .model-image1, .model-image2, .model-image3 {
+    display: inline-block;
+  }
+
+  &:first-of-type {
+    margin-top: 5rem;
+    padding-bottom: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .parallax5 {
+    display: none;
+  }
+
+  .parallax6 {
+    display: none;
+  }
+
+  .parallaxItem6 {
+    background-attachment: scroll;
+  }
+
+  .undergroundsection .undergroundstyle {
+    margin-bottom: 0;
+  }
+
+  .black:last-of-type {
+    padding-top: 0;
+  }
+
+}
+
+@media (width <= 720px) {
+
+  .undergroundsection {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .tekstblok {
+    width: 90vw;
+  }
+
+  .undergroundstyle {
+    width: 90vw;
+  }
+}
+
+@media (width <= 630px) {
+
+  .minus {
+    margin-top: -25rem;
+  }
+
+  .parallaxSection1 {
+    width: 100vw;
+    height: 53rem;
+    background-position: center;
+  }
+
+  .parallax7 {
+    background-image: url(../assets/img/nicodark.jpg);
+    background-size: contain;
+    width: 63rem;
+    height: 53rem;
+  }
+
+  .parallax2, .parallax3, .parallax4, .parallax8, .parallax9, .parallax10 {
+    background-image: none;
+  }
+
+  .overgangcite {
+    top: -10rem;
+    width: 90vw;
+    background-color: none;
+    margin: 3rem 1vw;
+  }
+
+  .model {
+    width: 90vw;
+  }
+
+  .modelcite {
+    width: 80vw;
+  }
+
+  .nico-image-1 {
+    background-image: url(../assets/img/nico50.jpg);
+    height: 30.7rem;
+  }
+
+  .voorna {
+    margin-top: 10rem;
+  }
+
+  .anim {
+    margin-top: -53rem;
+    font-size: 8rem;
+  }
+
+  .velvet-header {
+    background-image: url(../assets/img/velvetbanner50.jpg);
+    height: 34.2rem;
+    background-position: left;
+  }
+
+  .parallaxItem6 {
+    background-image: url(../assets/img/nico2_50.jpg);
+    height: 38.4rem;
+  }
+}
+
+@media (width <= 600px) {
+
+  .underground {
+    width: 90vw;
+    margin-left: 0;
+  }
+
+  .left {
+    margin-left: 0;
+  }
+
+  .model2 {
+    width: 90vw;
+  }
+
+  .solocite {
+    width: 80vw;
+  }
+
+  .solocontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .react-mount2 {
+    margin: 2rem;
+  }
+
+  .velvettitle {
+    margin-left: 5rem;
+    line-height: 120%;
+  }
+
+  .react-mount1 {
+    background-position: center;
+  }
+
+  .voor {
+    background-image: url(../assets/img/voor25.jpg);
+  }
+
+  .na {
+    background-image: url(../assets/img/na25.jpg);
+  }
+
+  .voorna-image {
+    height: 28.2rem;
+  }
+}
+
+@media (width <= 450px) {
+
+  .parallaxSection5 {
+    height: 25.2rem;
+    background-image: url(../assets/img/nicodark50.jpg);
+    background-attachment: local;
+  }
+
+  .parallaxSection1 {
+    height: 26.6rem;
+    background-image: url(../assets/img/nico1_50.jpg);
+    background-attachment: local;
+  }
+
+  .anim {
+    margin-top: -40rem;
+  }
+}
+
+@media (width <= 350px) {
+
+  .anim {
+    margin-top: -50rem;
+  }
+
+  .model-image1 {
+    margin-top: 17rem;
+  }
+
+  .modelcite {
+    margin-top: -100rem;
+  }
+
+  .nico-image-1 {
+    background-image: url(../assets/img/nico25.jpg);
+    height: 15.3rem;
+  }
+
+  .velvet-header {
+    background-image: url(../assets/img/velvetbanner25.jpg);
+    height: 17.1rem;
+  }
+
+  .minus {
+    margin-top: -45rem;
+  }
+
+  .parallaxItem6 {
+    background-image: url(../assets/img/nico2_50.jpg);
+    height: 40rem;
+  }
+}
+
+.react-mount {
+  width: 100%;
+  height: 100%;
+}
+
+.react-mount4 {
+  position: absolute;
+  margin-top: 5rem;
+  margin-left: 5rem;
+}
+
+.albums {
+  height: 35rem;
+}
+
+.sliders {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.slider {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.slider-range {
+  width: 30rem;
+}
+
+.slider-label {
+  width: 1rem;
+  font-size: 2rem;
+  margin-left: 1rem;
+  color: white;
+  margin-right: 2rem;
+  display: inline-block;
+  text-align: left;
+}
+
+.color-label {
+  margin-left: 3rem;
+  font-size: 2.2rem;
+  color: white;
+  display: block;
+  margin-top: 3rem;
+}
+
+li {
+  margin-bottom: 1rem;
 }
