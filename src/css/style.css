@@ -27,10 +27,10 @@ video {
   top: 50%;
   left: 50%;
   z-index: 1;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  min-width: 100vw;
+  min-height: 100vh;
+  /*width: auto;
+  height: auto;*/
   transform: translate(-50%, -50%);
 }
 
@@ -677,12 +677,6 @@ h2 {
   color: white;
 }
 
-.video {
-  width: 100vw;
-  height: 80vh;
-  background-color: gray;
-}
-
 .ari {
   position: absolute;
   align-self: flex-end;
@@ -853,6 +847,10 @@ footer {
 
 @media (width <= 1050px) {
 
+  header {
+    height: 83vh;
+  }
+
   .model {
     width: 40vw;
   }
@@ -870,11 +868,26 @@ footer {
   .parallaxItem6 {
     background-image: url(../assets/img/nico2_75.jpg);
     height: 57.6rem;
-    background-position: center;
+  }
+
+  video {
+    top: 0;
+    min-height: 90vh;
+    transform: translate(-50%, 0);
   }
 }
 
 @media (width <= 960px) {
+
+  header {
+    height: 70vh;
+  }
+
+  video {
+    top: 0;
+    min-height: 70vh;
+    transform: translate(-50%, 0);
+  }
 
   .content {
     width: 90vw;
@@ -960,6 +973,21 @@ footer {
 }
 
 @media (width <= 800px) {
+
+  header {
+    height: 50vh;
+  }
+
+  video {
+    display: none;
+  }
+
+  .mobileheader {
+    display: block;
+    width: 100vw;
+    height: 50vh;
+    background-color: gray;
+  }
 
   .parallaxSection1 {
     height: 53.1rem;
@@ -1109,7 +1137,6 @@ footer {
   .parallaxItem6 {
     background-image: url(../assets/img/nico2_50.jpg);
     height: 38.4rem;
-    background-position: center;
   }
 }
 
@@ -1197,7 +1224,6 @@ footer {
   .parallaxItem6 {
     background-image: url(../assets/img/nico2_25.jpg);
     height: 19.2rem;
-    background-position: right;
   }
 
   /*.parallaxSection5 {
@@ -1220,7 +1246,6 @@ footer {
 
 .albums {
   height: 35rem;
-  border: 1px solid red;
 }
 
 .sliders {
