@@ -29,7 +29,6 @@ class AppPlaylist extends Component {
     return (
       <section className='albumContainer'>
         <img className='album'src={image} />
-        {/* <p>{url}</p> */}
         <button className='playbutton' onClick={this.handlePlay}>Play</button>
         <audio src={url} ref={$el => this.$audio = $el} />
       </section>
