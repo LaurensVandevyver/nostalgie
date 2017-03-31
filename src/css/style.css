@@ -37,7 +37,7 @@ header {
   animation-delay: 1s;
 
   & h1 {
-    right: 0;
+    display: flex;
     font-family: times;
     color: var(--yellow);
     font-size: 20rem;
@@ -934,6 +934,26 @@ footer {
 
 @media (width <= 960px) {
 
+  .headercontent {
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    animation-delay: 1s;
+  }
+
+  @-webkit-keyframes fadeIn {
+
+    from {
+      opacity: 0;
+      bottom: -10rem;
+    }
+
+    to {
+      opacity: 1;
+      bottom: -5rem;
+    }
+  }
+
   header {
     height: 70vh;
   }
@@ -1070,12 +1090,33 @@ footer {
   }
 
   .headercontent {
+    z-index: 9999;
     position: relative;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    animation-delay: 1s;
+
+    & h1 {
+      left: 2rem;
+    }
+
+    & .headerintro {
+      display: none;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+
+    from {
+      opacity: 0;
+      bottom: -40rem;
+    }
+
+    to {
+      opacity: 1;
+      bottom: -30rem;
+    }
   }
 
   video {
@@ -1090,6 +1131,7 @@ footer {
     width: 100vw;
     height: 50vh;
     background-image: url(../assets/video/header.gif);
+    background-size: cover;
   }
 
   .parallaxSection1 {
@@ -1319,9 +1361,21 @@ footer {
   .voorna-image {
     height: 28.2rem;
   }
+
+  .headercontent {
+    right: 1rem;
+  }
 }
 
 @media (width <= 450px) {
+
+  .headercontent {
+
+    & h1 {
+      font-size: 14rem;
+      margin-left: 2rem;
+    }
+  }
 
   .parallaxSection5 {
     height: 25.2rem;
