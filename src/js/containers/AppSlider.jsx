@@ -18,7 +18,7 @@ class App extends Component {
 
   render() {
     const {value, anim} = this.state;
-    const style = {backgroundImage: `url(../assets/img/caroussel${value}.jpg)`};
+    const style = {backgroundImage: `url(./assets/img/caroussel${value}.jpg)`};
 
     let classes;
     if (anim) classes = ` anim`;

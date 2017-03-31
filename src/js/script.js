@@ -4,34 +4,39 @@ import React from 'react';
 import {render} from 'react-dom';
 import AppSlider from './containers/AppSlider';
 import AppPlaylist from './containers/AppPlaylist';
-import ScrollReveal from 'ScrollReveal';
+// import ScrollReveal from 'ScrollReveal';
 
-window.sr = ScrollReveal();
+// window.sr = ScrollReveal();
 const songs = [
   {
-    image: `../assets/img/album1.jpg`,
-    url: `../assets/audio/one.mp3`
+    image: `./assets/img/album1.jpg`,
+    url: `./assets/audio/one.mp3`
   },
   {
-    image: `../assets/img/album2.jpg`,
-    url: `../assets/audio/two.mp3`
+    image: `./assets/img/album2.jpg`,
+    url: `./assets/audio/two.mp3`
   },
   {
-    image: `../assets/img/album3.jpg`,
-    url: `../assets/audio/three.mp3`
+    image: `./assets/img/album3.jpg`,
+    url: `./assets/audio/three.mp3`
   },
   {
-    image: `../assets/img/album4.jpg`,
-    url: `../assets/audio/four.mp3`
+    image: `./assets/img/album4.jpg`,
+    url: `./assets/audio/four.mp3`
   }
 ];
 
 const revealText = () => {
-  window.sr.reveal(`.intro`);
-  window.sr.reveal(`.articlestyle`);
-  window.sr.reveal(`.articlestyle2`);
-  window.sr.reveal(`cite`);
-  window.sr.reveal(`.albumContainer`);
+  const $containers = document.querySelectorAll(`.intro, .articlestyle, .articlestyle2`);
+  const center = window.innerHeight * 0.9;
+
+  $containers.forEach($container => {
+    const top = $container.getBoundingClientRect().top;
+    const bottom = $container.getBoundingClientRect().bottom;
+    if (center > top && center < bottom) {
+      $container.style.visibility = `visible`;
+    }
+  });
 };
 
 const parallax = () => {
@@ -102,7 +107,7 @@ const checkScrollVelvet = () => {
 
   for (let i = 2;i < 7;i ++) {
     if (topImage <= i * (- 100) && topImage >= i * (- 100) - 100) {
-      $image.style.backgroundImage = `url(../assets/img/nico2_${i}.png)`;
+      $image.style.backgroundImage = `url(./assets/img/nico2_${i}.png)`;
     } else if (topImage >= 0 || topImage <= - 600) {
       $image.style.backgroundImage = `none`;
     }
@@ -128,7 +133,7 @@ const focusElements = () => {
 
 const getCenterElement = () => {
   const sections = document.querySelectorAll(`.model`);
-  const center = window.innerHeight * 0.4;
+  const center = window.innerHeight * 0.45;
   let id = 0;
 
   sections.forEach($section => {

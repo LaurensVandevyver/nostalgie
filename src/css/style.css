@@ -108,8 +108,8 @@ main {
   font-size: 1.7rem;
   line-height: 2.8rem;
   color: var(--grey);
-  visibility: hidden;
   transition: .5s ease;
+  visibility: hidden;
 
   &::first-letter {
     color: var(--blue);
@@ -135,8 +135,8 @@ strong {
 
 .intro {
   width: 75rem;
-  visibility: hidden;
   transition: .5s ease;
+  visibility: hidden;
 }
 
 .model {
@@ -216,7 +216,6 @@ strong {
 }
 
 .img-container {
-  visibility: hidden;
   position: fixed;
   top: 0;
   right: 12vw;
@@ -492,7 +491,6 @@ h2 {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  visibility: hidden;
   transition: .5s ease;
 }
 
@@ -504,8 +502,8 @@ h2 {
   background-image: url(../assets/img/play.png);
   width: 4rem;
   height: 4rem;
-  right: -2rem;
-  bottom: -2rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 
 .pausebutton {
@@ -516,8 +514,8 @@ h2 {
   background-image: url(../assets/img/pause.png);
   width: 4rem;
   height: 4rem;
-  right: -2rem;
-  bottom: -2rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 
 .voorna {
@@ -603,8 +601,8 @@ h2 {
   line-height: 2.8rem;
   z-index: 9;
   color: var(--light_grey);
-  visibility: hidden;
   transition: .5s ease;
+  visibility: hidden;
 
   strong {
     color: white;
@@ -952,18 +950,32 @@ footer {
 @media (width <= 800px) {
 
   .parallaxSection1 {
-    position: relative;
-    margin-top: 5rem;
-    height: 40rem;
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    height: 53.1rem;
+    background-image: url(../assets/img/nico1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .parallaxSection5 {
+    height: 50.4rem;
+    background-image: url(../assets/img/nicodark.jpg);
+    background-position: right top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .diamanten {
+    display: none;
   }
 
   .parallaxItem1 {
-    width: 150rem;
+    display: none;
+  }
+
+  .parallaxItem5 {
+    display: none;
   }
 
   .overgangcite {
@@ -1033,13 +1045,7 @@ footer {
   .parallaxSection1 {
     width: 100vw;
     height: 53rem;
-  }
-
-  .parallax1 {
-    background-image: url(../assets/img/nico1.jpg);
-    background-size: contain;
-    width: 63rem;
-    height: 53rem;
+    background-position: center;
   }
 
   .parallax7 {
@@ -1144,6 +1150,21 @@ footer {
   }
 }
 
+@media (width <= 450px) {
+
+  .parallaxSection5 {
+    height: 25.2rem;
+    background-image: url(../assets/img/nicodark50.jpg);
+    background-attachment: local;
+  }
+
+  .parallaxSection1 {
+    height: 26.6rem;
+    background-image: url(../assets/img/nico1_50.jpg);
+    background-attachment: local;
+  }
+}
+
 @media (width <= 350px) {
 
   .nico-image-1 {
@@ -1164,6 +1185,12 @@ footer {
     background-image: url(../assets/img/nico2_25.jpg);
     height: 19.2rem;
   }
+
+  /*.parallaxSection5 {
+    height: 25.2rem;
+    background-image: url(../assets/img/nicodark50.jpg);
+    background-attachment: local;
+  }*/
 }
 
 .react-mount {

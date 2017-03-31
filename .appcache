@@ -1,0 +1,32 @@
+CACHE MANIFEST
+
+CACHE:
+index.html
+css/style.css
+js/script.js
+assets/img/album1.jpg
+assets/img/album2.jpg
+assets/img/album3.jpg
+assets/img/album4.jpg
+assets/imgcaroussel0.jpg
+assets/img/darkbackground.png
+assets/img/diamant1.png
+assets/img/diamant2.png
+assets/img/diamant3.png
+assets/img/logo.png
+assets/img/na75.jpg
+assets/img/nico1_1.jpg
+assets/img/nico1_2.jpg
+assets/img/nico1_3.jpg
+assets/img/nico1_4.jpg
+assets/img/one.png
+assets/img/play.png
+assets/img/two.png
+assets/img/velvetbanner75.jpg
+assets/img/velvetbanner_1.png
+assets/img/velvetbanner_2.png
+assets/img/voor75.jpg
+
+FALLBACK:
+
+NETWORK: *
